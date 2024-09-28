@@ -1,13 +1,13 @@
 "use server";
 
-import { NursingTriageType } from "@/@types/nursing-triage";
+import { MedicalCareType } from "@/@types/medical-care";
 import {
   InternalServerError,
   UnauthorizedError,
   UserNotFoundError,
 } from "@/lib/errors";
 import { db } from "@/server/db";
-import { nursingTriageSchema } from "@/server/db/schema";
+import { medicalCareSchema, nursingTriageSchema } from "@/server/db/schema";
 import { eq } from "drizzle-orm";
 
 export async function GetMedicalCare(id: string) {
@@ -15,20 +15,20 @@ export async function GetMedicalCare(id: string) {
     throw new UnauthorizedError();
   }
 
-  const nursingTriageQuery = await db
+  const GetMedicalCareQuery = await db
     .select()
-    .from(nursingTriageSchema)
-    .where(eq(nursingTriageSchema.id, id));
+    .from(medicalCareSchema)
+    .where(eq(medicalCareSchema.id, id));
 
-  if (!nursingTriageQuery) {
+  if (!GetMedicalCareQuery) {
     throw new UserNotFoundError();
   }
 
-  if (nursingTriageQuery.length === 0) {
+  if (GetMedicalCareQuery.length === 0) {
     throw new UserNotFoundError();
   }
 
-  const nursingTriage = nursingTriageQuery[0];
+  const medicalCare = GetMedicalCareQuery[0];
 
-  return nursingTriage;
+  return medicalCare;
 }

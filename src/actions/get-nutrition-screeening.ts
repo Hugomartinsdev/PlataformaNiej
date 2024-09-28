@@ -1,6 +1,6 @@
 "use server";
 
-import { NursingTriageType } from "@/@types/nursing-triage";
+import { NutritionScreeeningType } from "@/@types/nutririon-screeening";
 import {
   InternalServerError,
   UnauthorizedError,

@@ -8,6 +8,7 @@ import {
 import { db } from "@/server/db";
 import { psychologyTriageSchema } from "@/server/db/schema";
 import { eq } from "drizzle-orm";
+import { PsychologyTriageType } from "@/@types/psychology-triage";
 
 export async function GetPsychologyTriage(id: string) {
   if (!id) {
