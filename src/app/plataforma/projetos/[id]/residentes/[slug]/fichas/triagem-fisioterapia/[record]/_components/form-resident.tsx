@@ -198,618 +198,730 @@ export function FormResident({
   return (
     <>
       <div className="mt-10">
-        <Subheading>Informações básicas</Subheading>
-        <Divider className="my-4" />
+  <Subheading>Informações básicas</Subheading>
+  <Divider className="my-4" />
 
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(handleCreateMedic)}>
-            <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-5">
-              <FormField
-                control={form.control}
-                name="occupation"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Ocupação:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+  <Form {...form}>
+    <form onSubmit={form.handleSubmit(handleCreateMedic)}>
+      <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-5">
+        <FormField
+          control={form.control}
+          name="occupation"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Ocupação:</FormLabel><br />
+              <FormControl>
+                <Input {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
 
-              <FormField
-                control={form.control}
-                name="responsible"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Responsável:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+        <FormField
+          control={form.control}
+          name="responsible"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Responsável:</FormLabel><br />
+              <FormControl>
+                <Input {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
 
-              <FormField
-                control={form.control}
-                name="kinship"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Parentesco:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+        <FormField
+          control={form.control}
+          name="kinship"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Parentesco:</FormLabel><br />
+              <FormControl>
+                <Input {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
 
-              <FormField
-                control={form.control}
-                name="clinicalDiagnosis"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>DIAGNÓSTICO CLÍNICO:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+        <FormField
+          control={form.control}
+          name="clinicalDiagnosis"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>DIAGNÓSTICO CLÍNICO:</FormLabel><br />
+              <FormControl>
+                <Input {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
 
-              <FormField
-                control={form.control}
-                name="mainComplaint"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Queixa Principal:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+        <FormField
+          control={form.control}
+          name="mainComplaint"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Queixa Principal:</FormLabel><br />
+              <FormControl>
+                <Input {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
 
-              <FormField
-                control={form.control}
-                name="functionalComplaint"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Queixa Funcional:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+        <FormField
+          control={form.control}
+          name="functionalComplaint"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Queixa Funcional:</FormLabel><br />
+              <FormControl>
+                <Input {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
 
-              <FormField
-                control={form.control}
-                name="currentDiseaseHistory"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>HDA:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+        <FormField
+          control={form.control}
+          name="currentDiseaseHistory"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>HDA:</FormLabel><br />
+              <FormControl>
+                <Input {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
 
-              <FormField
-                control={form.control}
-                name="medications"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>MEDICAMENTOS EM USO:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+        <FormField
+          control={form.control}
+          name="medications"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>MEDICAMENTOS EM USO:</FormLabel><br />
+              <FormControl>
+                <Input {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
 
-              <FormField
-                control={form.control}
-                name="personalHistory"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>ANTECEDENTES PESSOAIS:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+        <FormField
+          control={form.control}
+          name="personalHistory"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>ANTECEDENTES PESSOAIS:</FormLabel><br />
+              <FormControl>
+                <Input {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
 
-              <FormField
-                control={form.control}
-                name="lifestyleHabits"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>HÁBITOS E CONDIÇÕES DE VIDA:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+        <FormField
+          control={form.control}
+          name="lifestyleHabits"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>HÁBITOS E CONDIÇÕES DE VIDA:</FormLabel><br />
+              <FormControl>
+                <Input {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
 
-              <FormField
-                control={form.control}
-                name="painAssessment"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>AVALIAÇÃO DA DOR:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="painIntensity"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Intensidade da Dor:</FormLabel>
-                    <FormControl>
-                      <Input {...field} type="number" min="0" max="10" />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+        <FormField
+          control={form.control}
+          name="painAssessment"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>AVALIAÇÃO DA DOR:</FormLabel><br />
+              <FormControl>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Selecione" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="nenhuma">nenhuma</SelectItem>
+                    <SelectItem value="Dor em repouso">Dor em repouso</SelectItem>
+                    <SelectItem value="Dor ao movimento">Dor ao movimento</SelectItem>
+                    <SelectItem value="Dor à palpação">Dor à palpação</SelectItem>
+                  </SelectContent>
+                </Select>
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
 
               <FormField
-                control={form.control}
-                name="painLocation"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Localização da Dor:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+  control={form.control}
+  name="painIntensity"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Intensidade da Dor (0-10):</FormLabel><br />
+      <FormControl>
+        <Input {...field} type="number" min="0" max="10" />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="painFrequency"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Frequência da Dor:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="painLocation"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Localização da Dor:</FormLabel><br />
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="Cabeça">Cabeça</SelectItem>
+            <SelectItem value="Peito">Peito</SelectItem>
+            <SelectItem value="Abdômen">Abdômen</SelectItem>
+            <SelectItem value="Costas">Costas</SelectItem>
+            <SelectItem value="Membros">Membros</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="painCharacteristics"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Características da Dor:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="painFrequency"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Frequência da Dor:</FormLabel><br />
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="Contínua">Contínua</SelectItem>
+            <SelectItem value="Intermitente">Intermitente</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="painInterference"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Interferência da Dor:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="painCharacteristics"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Características da Dor:</FormLabel><br />
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="Pulsátil">Pulsátil</SelectItem>
+            <SelectItem value="Afiada">Afiada</SelectItem>
+            <SelectItem value="Queimante">Queimante</SelectItem>
+            <SelectItem value="Surda">Surda</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="patientPresentation"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Apresentação do paciente:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="painInterference"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Interferência da Dor:</FormLabel><br />
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="Baixa">Baixa</SelectItem>
+            <SelectItem value="Moderada">Moderada</SelectItem>
+            <SelectItem value="Alta">Alta</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="weight"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Peso:</FormLabel>
-                    <FormControl>
-                      <Input {...field} type="number" step="0.1" />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="patientPresentation"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Apresentação do paciente:</FormLabel><br />
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="height"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Altura:</FormLabel>
-                    <FormControl>
-                      <Input {...field} type="number" step="0.01" />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="weight"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Peso:</FormLabel><br />
+      <FormControl>
+        <Input {...field} type="number" step="0.1" />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="bmi"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>IMC:</FormLabel>
-                    <FormControl>
-                      <Input {...field} type="number" step="0.1" />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="height"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Altura:</FormLabel><br />
+      <FormControl>
+        <Input {...field} type="number" step="0.01" />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="bloodPressure"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>PA:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="bmi"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>IMC:</FormLabel><br />
+      <FormControl>
+        <Input {...field} type="number" step="0.1" />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="heartRate"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>FC:</FormLabel>
-                    <FormControl>
-                      <Input {...field} type="number" />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="bloodPressure"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>PA:</FormLabel><br />
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="respiratoryRate"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>FR:</FormLabel>
-                    <FormControl>
-                      <Input {...field} type="number" />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="heartRate"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>FC:</FormLabel><br />
+      <FormControl>
+        <Input {...field} type="number" />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="oxygenSaturation"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>SpO2:</FormLabel>
-                    <FormControl>
-                      <Input {...field} type="number" step="0.1" />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="respiratoryRate"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>FR:</FormLabel><br />
+      <FormControl>
+        <Input {...field} type="number" />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="pulmonaryAuscultation"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>AP:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="oxygenSaturation"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>SpO2:</FormLabel><br />
+      <FormControl>
+        <Input {...field} type="number" step="0.1" />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="posturalAssessment"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Avaliação postural:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="pulmonaryAuscultation"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>AP:</FormLabel><br />
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="specificInspection"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Inspeção específica:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="posturalAssessment"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Avaliação postural:</FormLabel><br />
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="Normal">Normal</SelectItem>
+            <SelectItem value="Anormal">Anormal</SelectItem>
+            <SelectItem value="Observações">Observações</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="neurologicalExam"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>QUADROS NEUROLÓGICOS:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="specificInspection"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Inspeção específica:</FormLabel><br />
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="ashworthScale"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Escala de ASHWORTH modificada:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="neurologicalExam"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>QUADROS NEUROLÓGICOS:</FormLabel><br />
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value=" "></SelectItem>
+            <SelectItem value="Normal">Normal</SelectItem>
+            <SelectItem value="Alterado">Alterado</SelectItem>
+            <SelectItem value="Observações">Observações</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <Input {...field} placeholder="Observações" />
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="rombergTest"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Teste de Romberg:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="ashworthScale"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Escala de ASHWORTH modificada:</FormLabel><br />
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="0">0</SelectItem>
+            <SelectItem value="1">1</SelectItem>
+            <SelectItem value="2">2</SelectItem>
+            <SelectItem value="3">3</SelectItem>
+            <SelectItem value="4">4</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="unilateralBalanceTest"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Teste de equilíbrio unipodal:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="rombergTest"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Teste de Romberg:</FormLabel><br />
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="Positivo">Positivo</SelectItem>
+            <SelectItem value="Negativo">Negativo</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="getUpAndGoTest"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Teste Modificado "Levante e vá" (get up and go):
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} type="number" step="0.1" />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="unilateralBalanceTest"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Teste de equilíbrio unipodal:</FormLabel><br />
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="Normal">Normal</SelectItem>
+            <SelectItem value="Alterado">Alterado</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="katzIndex"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Avaliação funcional – Índice de Katz:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="getUpAndGoTest"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Teste Modificado "Levante e vá" (get up and go):</FormLabel><br />
+      <FormControl>
+        <Input {...field} type="number" step="0.1" />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="fallHistory"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>História de quedas:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="katzIndex"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Avaliação funcional – Índice de Katz:</FormLabel><br />
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="fearOfFalling"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Tem medo de cair?</FormLabel>
-                    <FormControl>
-                      <Input {...field} type="checkbox" />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="fallHistory"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>História de quedas:</FormLabel><br />
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="timeUpAndGo"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Time Up and Go:</FormLabel>
-                    <FormControl>
-                      <Input {...field} type="number" step="0.1" />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="fearOfFalling"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Tem medo de cair?</FormLabel><br />
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="fallRisk"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Risco de quedas (TUG):</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="timeUpAndGo"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Time Up and Go:</FormLabel><br />
+      <FormControl>
+        <Input {...field} type="number" step="0.1" />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="tandemGait"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Marcha Tandem – Deambulação em linha reta avaliado em
-                      tempo ou passos:
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="fallRisk"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Risco de quedas (TUG):</FormLabel><br />
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="obstetricHistory"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>História Obstétrica:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
 
-              <FormField
-                control={form.control}
-                name="gynecologicalHistory"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Antecedentes ginecológicos:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+              
 
-              <FormField
-                control={form.control}
-                name="urinarySymptoms"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Sintomas Urinários:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="tandemGait"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Marcha Tandem – Deambulação em linha reta avaliado em tempo ou passos:
+      </FormLabel><br />
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="sexualFunction"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Avaliação da Função Sexual:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="obstetricHistory"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>História Obstétrica:</FormLabel><br />
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="anorectalEvaluation"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Avaliação anorretal:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="gynecologicalHistory"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Antecedentes ginecológicos:</FormLabel><br />
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="urinarySymptoms"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Sintomas Urinários:</FormLabel><br />
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="sexualFunction"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Avaliação da Função Sexual:</FormLabel><br />
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="anorectalEvaluation"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Avaliação anorretal:</FormLabel><br />
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
             </div>
 
             <div className="mt-8 flex">

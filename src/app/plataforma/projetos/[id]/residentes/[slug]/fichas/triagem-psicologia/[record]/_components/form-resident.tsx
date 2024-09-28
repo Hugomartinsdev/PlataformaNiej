@@ -152,392 +152,642 @@ export function FormResident({
 
   return (
     <>
-      <div className="mt-10">
-        <Subheading>Aspectos gerais</Subheading>
-        <Divider className="my-4" />
+<div className="mt-10">
+  <Subheading>Aspectos gerais</Subheading>
+  <Divider className="my-4" />
 
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(handleCreateMedic)}>
-            <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-5">
+  <Form {...form}>
+    <form onSubmit={form.handleSubmit(handleCreateMedic)}>
+      <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-5">
+        
+        <FormField
+          control={form.control}
+          name="leisureOpportunitiesEvaluation"
+          render={({ field }) => (
+            <FormItem className="col-span-2">
+              <FormLabel>
+                Como você avalia suas oportunidades de lazer? 
+                <br />
+              </FormLabel>
+              <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <FormControl>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Selecione" />
+                  </SelectTrigger>
+                </FormControl>
+                <SelectContent>
+                  <SelectItem value="Muito ruins">Muito ruins</SelectItem>
+                  <SelectItem value="Ruins">Ruins</SelectItem>
+                  <SelectItem value="Nem ruins, nem boas">Nem ruins, nem boas</SelectItem>
+                  <SelectItem value="Boas">Boas</SelectItem>
+                  <SelectItem value="Muito boas">Muito boas</SelectItem>
+                </SelectContent>
+              </Select>
+              <FormMessage className="mt-1 !text-red-500" />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="sleepEvaluation"
+          render={({ field }) => (
+            <FormItem className="col-span-2">
+              <FormLabel>
+                Como você avalia seu sono? Apresenta dificuldades para dormir? (Insônia/ Hipersonia)
+                <br />
+              </FormLabel>
+              <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <FormControl>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Selecione" />
+                  </SelectTrigger>
+                </FormControl>
+                <SelectContent>
+                  <SelectItem value="Muito ruins">Muito ruins</SelectItem>
+                  <SelectItem value="Ruins">Ruins</SelectItem>
+                  <SelectItem value="Nem ruins, nem boas">Nem ruins, nem boas</SelectItem>
+                  <SelectItem value="Boas">Boas</SelectItem>
+                  <SelectItem value="Muito boas">Muito boas</SelectItem>
+                </SelectContent>
+              </Select>
+              <FormMessage className="mt-1 !text-red-500" />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="dietEvaluation"
+          render={({ field }) => (
+            <FormItem className="col-span-2">
+              <FormLabel>
+                Como você avalia a sua alimentação?
+                <br />
+              </FormLabel>
+              <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <FormControl>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Selecione" />
+                  </SelectTrigger>
+                </FormControl>
+                <SelectContent>
+                  <SelectItem value="Muito ruins">Muito ruins</SelectItem>
+                  <SelectItem value="Ruins">Ruins</SelectItem>
+                  <SelectItem value="Nem ruins, nem boas">Nem ruins, nem boas</SelectItem>
+                  <SelectItem value="Boas">Boas</SelectItem>
+                  <SelectItem value="Muito boas">Muito boas</SelectItem>
+                </SelectContent>
+              </Select>
+              <FormMessage className="mt-1 !text-red-500" />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="physicalActivity"
+          render={({ field }) => (
+            <FormItem className="col-span-2">
+              <FormLabel>
+                Você realiza alguma atividade física?
+                <br />
+              </FormLabel>
+              <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <FormControl>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Selecione" />
+                  </SelectTrigger>
+                </FormControl>
+                <SelectContent>
+                  <SelectItem value="Sim">Sim</SelectItem>
+                  <SelectItem value="Não">Não</SelectItem>
+                </SelectContent>
+              </Select>
+              <Textarea {...field} className="mt-2" placeholder="Se sim, quais?" />
+              <FormMessage className="mt-1 !text-red-500" />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="routineDescription"
+          render={({ field }) => (
+            <FormItem className="col-span-2">
+              <FormLabel>
+                Como você descreveria a sua rotina?
+                <br />
+              </FormLabel>
+              <FormControl>
+                <Textarea {...field} className="mt-2" />
+              </FormControl>
+              <FormMessage className="mt-1 !text-red-500" />
+            </FormItem>
+          )}
+        />
+
+
+<Divider className="my-4" />
+
+<Subheading>Autocuidado</Subheading>
+
+<Divider className="my-4" />
+
+<div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-5">
+  <FormField
+    control={form.control}
+    name="personalTimeWellBeing"
+    render={({ field }) => (
+      <FormItem className="col-span-2">
+        <FormLabel>
+          Você consegue ter algum tempo para si, para fazer alguma coisa que lhe gere bem estar?
+          <br />
+        </FormLabel>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <FormControl>
+            <SelectTrigger>
+              <SelectValue placeholder="Selecione" />
+            </SelectTrigger>
+          </FormControl>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+            <SelectItem value="Às vezes">Às vezes</SelectItem>
+          </SelectContent>
+        </Select>
+        <FormMessage className="mt-1 !text-red-500" />
+      </FormItem>
+    )}
+  />
+
+  <FormField
+    control={form.control}
+    name="currentFeelings"
+    render={({ field }) => (
+      <FormItem className="col-span-2">
+        <FormLabel>
+          Atualmente, você tem mais sentimentos bons ou ruins em sua vida?
+          <br />
+        </FormLabel>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <FormControl>
+            <SelectTrigger>
+              <SelectValue placeholder="Selecione" />
+            </SelectTrigger>
+          </FormControl>
+          <SelectContent>
+            <SelectItem value="Bons">Bons</SelectItem>
+            <SelectItem value="Ruins">Ruins</SelectItem>
+          </SelectContent>
+        </Select>
+        <FormMessage className="mt-1 !text-red-500" />
+      </FormItem>
+    )}
+  />
+</div>
+
+<Divider className="my-4" />
+
+<Subheading>Rede de Apoio</Subheading>
+
+<Divider className="my-4" />
+
+  <FormField
+  control={form.control}
+  name="personalTimeWellBeing"
+  render={({ field }) => (
+    <FormItem className="col-span-2">
+      <FormLabel>
+        Você consegue ter algum tempo para si, para fazer alguma coisa que lhe gere bem estar?
+        <br />
+      </FormLabel>
+      <Select onValueChange={field.onChange} defaultValue={field.value}>
+        <FormControl>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+        </FormControl>
+        <SelectContent>
+          <SelectItem value="Sim">Sim</SelectItem>
+          <SelectItem value="Não">Não</SelectItem>
+          <SelectItem value="Às vezes">Às vezes</SelectItem>
+        </SelectContent>
+      </Select>
+      <FormMessage className="mt-1 !text-red-500" />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="currentFeelings"
+  render={({ field }) => (
+    <FormItem className="col-span-2">
+      <FormLabel>
+        Atualmente, você tem mais sentimentos bons ou ruins em sua vida?
+        <br />
+      </FormLabel>
+      <Select onValueChange={field.onChange} defaultValue={field.value}>
+        <FormControl>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+        </FormControl>
+        <SelectContent>
+          <SelectItem value="Bons">Bons</SelectItem>
+          <SelectItem value="Ruins">Ruins</SelectItem>
+        </SelectContent>
+      </Select>
+      <FormMessage className="mt-1 !text-red-500" />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="currentFeelingDescription"
+  render={({ field }) => (
+    <FormItem className="col-span-2">
+      <FormLabel>
+        Qual sentimento melhor descreve como você está se sentindo hoje?
+        <br />
+      </FormLabel>
+      <Select onValueChange={field.onChange} defaultValue={field.value}>
+        <FormControl>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+        </FormControl>
+        <SelectContent>
+          <SelectItem value="Alegria">Alegria</SelectItem>
+          <SelectItem value="Tristeza">Tristeza</SelectItem>
+          <SelectItem value="Medo / Preocupação">Medo / Preocupação</SelectItem>
+          <SelectItem value="Desespero">Desespero</SelectItem>
+          <SelectItem value="Ansiedade">Ansiedade</SelectItem>
+          <SelectItem value="Raiva">Raiva</SelectItem>
+          <SelectItem value="Tranquilidade">Tranquilidade</SelectItem>
+          <SelectItem value="Outro">Outro</SelectItem>
+        </SelectContent>
+      </Select>
+      <FormMessage className="mt-1 !text-red-500" />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="stressLevel"
+  render={({ field }) => (
+    <FormItem className="col-span-2">
+      <FormLabel>
+        Como você avalia seu nível de estresse, de 0 a 10?
+        <br />
+      </FormLabel>
+      <Select onValueChange={field.onChange} defaultValue={field.value}>
+        <FormControl>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+        </FormControl>
+        <SelectContent>
+          {Array.from({ length: 11 }, (_, i) => (
+            <SelectItem key={i} value={String(i)}>
+              {i}
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
+      <FormMessage className="mt-1 !text-red-500" />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="stressCoping"
+  render={({ field }) => (
+    <FormItem className="col-span-2">
+      <FormLabel>
+        Como você lida com esse estresse?
+        <br />
+      </FormLabel>
+      <FormControl>
+        <Textarea {...field} className="mt-2" placeholder="Descreva como você lida com o estresse" />
+      </FormControl>
+      <FormMessage className="mt-1 !text-red-500" />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="nervousnessFrequency"
+  render={({ field }) => (
+    <FormItem className="col-span-2">
+      <FormLabel>
+        De 0 a 10, com que frequência você se sente nervoso?
+        <br />
+      </FormLabel>
+      <Select onValueChange={field.onChange} defaultValue={field.value}>
+        <FormControl>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+        </FormControl>
+        <SelectContent>
+          {Array.from({ length: 11 }, (_, i) => (
+            <SelectItem key={i} value={String(i)}>
+              {i}
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
+      <FormMessage className="mt-1 !text-red-500" />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="sadnessFrequency"
+  render={({ field }) => (
+    <FormItem className="col-span-2">
+      <FormLabel>
+        De 0 a 10, com que frequência você se sente triste, sem energia, sem esperança e desmotivado?
+        <br />
+      </FormLabel>
+      <Select onValueChange={field.onChange} defaultValue={field.value}>
+        <FormControl>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+        </FormControl>
+        <SelectContent>
+          {Array.from({ length: 11 }, (_, i) => (
+            <SelectItem key={i} value={String(i)}>
+              {i}
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
+      <FormMessage className="mt-1 !text-red-500" />
+    </FormItem>
+  )}
+/>
+
+
+<Divider className="my-4" />
+
+<Subheading>Saúde mental / Condição emocional</Subheading>
+
+<Divider className="my-4" />
+
+  <FormField
+    control={form.control}
+    name="currentFeelingDescription"
+    render={({ field }) => (
+      <FormItem className="col-span-2">
+        <FormLabel>
+          Qual sentimento melhor descreve como você está se sentindo hoje?
+          <br />
+        </FormLabel>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <FormControl>
+            <SelectTrigger>
+              <SelectValue placeholder="Selecione" />
+            </SelectTrigger>
+          </FormControl>
+          <SelectContent>
+            <SelectItem value="Alegria">Alegria</SelectItem>
+            <SelectItem value="Tristeza">Tristeza</SelectItem>
+            <SelectItem value="Medo / Preocupação">Medo / Preocupação</SelectItem>
+            <SelectItem value="Desespero">Desespero</SelectItem>
+            <SelectItem value="Ansiedade">Ansiedade</SelectItem>
+            <SelectItem value="Raiva">Raiva</SelectItem>
+            <SelectItem value="Tranquilidade">Tranquilidade</SelectItem>
+            <SelectItem value="Outro">Outro</SelectItem>
+          </SelectContent>
+        </Select>
+        <FormMessage className="mt-1 !text-red-500" />
+      </FormItem>
+    )}
+  />
+
+  <FormField
+    control={form.control}
+    name="stressLevel"
+    render={({ field }) => (
+      <FormItem className="col-span-2">
+        <FormLabel>
+          Como você avalia seu nível de estresse, de 0 a 10?
+          <br />
+        </FormLabel>
+        <FormControl>
+          <Textarea {...field} className="mt-2" placeholder="Nível de estresse" />
+        </FormControl>
+        <FormMessage className="mt-1 !text-red-500" />
+      </FormItem>
+    )}
+  />
+
+  <FormField
+    control={form.control}
+    name="stressCoping"
+    render={({ field }) => (
+      <FormItem className="col-span-2">
+        <FormLabel>
+          Como você lida com esse estresse?
+          <br />
+        </FormLabel>
+        <FormControl>
+          <Textarea {...field} className="mt-2" placeholder="Estratégias de enfrentamento" />
+        </FormControl>
+        <FormMessage className="mt-1 !text-red-500" />
+      </FormItem>
+    )}
+  />
+
+  <FormField
+    control={form.control}
+    name="nervousnessFrequency"
+    render={({ field }) => (
+      <FormItem className="col-span-2">
+        <FormLabel>
+          De 0 a 10, com que frequência você se sente nervoso?
+          <br />
+        </FormLabel>
+        <FormControl>
+          <Textarea {...field} className="mt-2" placeholder="Frequência de nervosismo" />
+        </FormControl>
+        <FormMessage className="mt-1 !text-red-500" />
+      </FormItem>
+    )}
+  />
+
+  <FormField
+    control={form.control}
+    name="sadnessFrequency"
+    render={({ field }) => (
+      <FormItem className="col-span-2">
+        <FormLabel>
+          De 0 a 10, com que frequência você se sente triste, sem energia, sem esperança e desmotivado?
+          <br />
+        </FormLabel>
+        <FormControl>
+          <Textarea {...field} className="mt-2" placeholder="Frequência de tristeza" />
+        </FormControl>
+        <FormMessage className="mt-1 !text-red-500" />
+      </FormItem>
+    )}
+  />
+
+  <FormField
+    control={form.control}
+    name="psychologicalCare"
+    render={({ field }) => (
+      <FormItem className="col-span-2">
+        <FormLabel>
+          Já fez ou faz atendimento psicológico?
+          <br />
+        </FormLabel>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <FormControl>
+            <SelectTrigger>
+              <SelectValue placeholder="Selecione" />
+            </SelectTrigger>
+          </FormControl>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+        <Textarea {...field} className="mt-2" placeholder="Se sim, por quanto tempo?" />
+        <FormMessage className="mt-1 !text-red-500" />
+      </FormItem>
+    )}
+  />
+
+
               <FormField
-                control={form.control}
-                name="leisureOpportunitiesEvaluation"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>
-                      Como você avalia suas oportunidades de lazer? - Muito
-                      ruins - Ruins - Nem ruins,nem boas - Boas - Muito boas
-                    </FormLabel>
-                    <FormControl>
-                      <Textarea {...field} className="mt-2" />
-                    </FormControl>
+  control={form.control}
+  name="psychiatricCare"
+  render={({ field }) => (
+    <FormItem className="col-span-2">
+      <FormLabel>
+        Já fez ou faz atendimento psiquiátrico?
+        <br />
+      </FormLabel>
+      <Select onValueChange={field.onChange} defaultValue={field.value}>
+        <FormControl>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+        </FormControl>
+        <SelectContent>
+          <SelectItem value="Sim">Sim</SelectItem>
+          <SelectItem value="Não">Não</SelectItem>
+        </SelectContent>
+      </Select>
+      <Textarea {...field} className="mt-2" placeholder="Se sim, por que foi necessário?" />
+      <FormMessage className="mt-1 !text-red-500" />
+    </FormItem>
+  )}
+/>
 
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="psychiatricMedicationUse"
+  render={({ field }) => (
+    <FormItem className="col-span-2">
+      <FormLabel>
+        Atualmente, faz uso de alguma medicação psiquiátrica?
+        <br />
+      </FormLabel>
+      <FormControl>
+        <Textarea {...field} className="mt-2" placeholder="Exemplo: Rivotril, Escitalopram, Sertralina" />
+      </FormControl>
+      <FormMessage className="mt-1 !text-red-500" />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="sleepEvaluation"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>
-                      Como você avalia seu sono? Apresenta dificuldades para
-                      dormir? (Insônia/ Hipersonia) - Muito ruins - Ruins - Nem
-                      ruins,nem boas - Boas - Muito boas
-                    </FormLabel>
-                    <FormControl>
-                      <Textarea {...field} className="mt-2" />
-                    </FormControl>
+<FormField
+  control={form.control}
+  name="voluntaryPsychologicalCare"
+  render={({ field }) => (
+    <FormItem className="col-span-2">
+      <FormLabel>
+        Você buscaria, voluntariamente, atendimento psicológico, caso fosse de forma gratuita?
+        <br />
+      </FormLabel>
+      <Select onValueChange={field.onChange} defaultValue={field.value}>
+        <FormControl>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+        </FormControl>
+        <SelectContent>
+          <SelectItem value="Sim">Sim</SelectItem>
+          <SelectItem value="Não">Não</SelectItem>
+        </SelectContent>
+      </Select>
+      <FormMessage className="mt-1 !text-red-500" />
+    </FormItem>
+  )}
+/>
 
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="interactionObservations"
+  render={({ field }) => (
+    <FormItem className="col-span-2">
+      <FormLabel>
+        Observações importantes percebidas na nossa interação com você (postura, comportamento, apresentação, etc.)
+        <br />
+      </FormLabel>
+      <FormControl>
+        <Textarea {...field} className="mt-2" placeholder="Escreva suas observações" />
+      </FormControl>
+      <FormMessage className="mt-1 !text-red-500" />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="dietEvaluation"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>
-                      Como você avalia a sua alimentação? - Muito ruins - Ruins
-                      - Nem ruins,nem boas - Boas - Muito boas
-                    </FormLabel>
-                    <FormControl>
-                      <Textarea {...field} className="mt-2" />
-                    </FormControl>
+<FormField
+  control={form.control}
+  name="psychologyTeamGuidance"
+  render={({ field }) => (
+    <FormItem className="col-span-2">
+      <FormLabel>
+        Há alguma orientação específica que você gostaria de receber da equipe de Psicologia?
+        <br />
+      </FormLabel>
+      <FormControl>
+        <Textarea {...field} className="mt-2" placeholder="Ex: depressão, ansiedade, autocuidados" />
+      </FormControl>
+      <FormMessage className="mt-1 !text-red-500" />
+    </FormItem>
+  )}
+/>
 
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="communitySuggestions"
+  render={({ field }) => (
+    <FormItem className="col-span-2">
+      <FormLabel>
+        Na sua opinião, há algo que nós, do projeto, poderíamos ofertar para a comunidade?
+        <br />
+      </FormLabel>
+      <FormControl>
+        <Textarea {...field} className="mt-2" placeholder="Escreva suas sugestões" />
+      </FormControl>
+      <FormMessage className="mt-1 !text-red-500" />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="physicalActivity"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>
-                      Você realiza alguma atividade física ? - Sim Qual(is) -
-                      Não:
-                    </FormLabel>
-                    <FormControl>
-                      <Textarea {...field} className="mt-2" />
-                    </FormControl>
-
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="routineDescription"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>Como você descreveria a sua rotina?</FormLabel>
-                    <FormControl>
-                      <Textarea {...field} className="mt-2" />
-                    </FormControl>
-
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
-            </div>
-
-            <Divider className="my-4" />
-
-            <Subheading>Autocuidado</Subheading>
-
-            <Divider className="my-4" />
-
-            <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-5">
-              <FormField
-                control={form.control}
-                name="personalTimeWellBeing"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>
-                      Você consegue ter algum tempo para si, para fazer alguma
-                      coisa que lhe gere bem estar? - Sim - Não - Às vezes
-                    </FormLabel>
-                    <FormControl>
-                      <Textarea {...field} className="mt-2" />
-                    </FormControl>
-
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="currentFeelings"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>
-                      Atualmente, você tem mais sentimentos bons ou ruins em sua
-                      vida?
-                    </FormLabel>
-                    <FormControl>
-                      <Textarea {...field} className="mt-2" />
-                    </FormControl>
-
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
-            </div>
-
-            <Divider className="my-4" />
-
-            <Subheading>Rede de Apoio</Subheading>
-
-            <Divider className="my-4" />
-
-            <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-5">
-              <FormField
-                control={form.control}
-                name="supportSystem"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>
-                      Quando você passa por algum problema, tem pessoas que lhe
-                      apoiem, ajudem, estejam porperto? - Sim Quem? - Não
-                    </FormLabel>
-                    <FormControl>
-                      <Textarea {...field} className="mt-2" />
-                    </FormControl>
-
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
-            </div>
-
-            <Divider className="my-4" />
-
-            <Subheading>Saúde mental / Condição emocional</Subheading>
-
-            <Divider className="my-4" />
-
-            <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-5">
-              <FormField
-                control={form.control}
-                name="currentFeelingDescription"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>
-                      Qual sentimento melhor descreve como você está se sentindo
-                      hoje? ( ) Alegria ( ) Tristeza ( ) Medo / Preocupação ( )
-                      Desespero ( ) Ansiedade ( ) Raiva ( )Tranquilidade/Outro:
-                    </FormLabel>
-                    <FormControl>
-                      <Textarea {...field} className="mt-2" />
-                    </FormControl>
-
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="stressLevel"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>
-                      Como você avalia seu nível de estresse, de 0 a 10?
-                    </FormLabel>
-                    <FormControl>
-                      <Textarea {...field} className="mt-2" />
-                    </FormControl>
-
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="stressCoping"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>Como você lida com esse estresse? </FormLabel>
-                    <FormControl>
-                      <Textarea {...field} className="mt-2" />
-                    </FormControl>
-
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="nervousnessFrequency"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>
-                      De 0 a 10, com que frequência você se sente nervoso?
-                    </FormLabel>
-                    <FormControl>
-                      <Textarea {...field} className="mt-2" />
-                    </FormControl>
-
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="sadnessFrequency"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>
-                      De 0 a 10, com que frequência você se sente triste, sem
-                      energia, sem esperança e desmotivado?
-                    </FormLabel>
-                    <FormControl>
-                      <Textarea {...field} className="mt-2" />
-                    </FormControl>
-
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="psychologicalCare"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>
-                      Já fez ou faz atendimento psicológico? - Sim - Não - Se
-                      sim,por quanto tempo?
-                    </FormLabel>
-                    <FormControl>
-                      <Textarea {...field} className="mt-2" />
-                    </FormControl>
-
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="psychiatricCare"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>
-                      Já fez ou faz atendimento psiquiátrico? - Sim - Não - Se
-                      sim, por que foi necessário?
-                    </FormLabel>
-                    <FormControl>
-                      <Textarea {...field} className="mt-2" />
-                    </FormControl>
-
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="psychiatricMedicationUse"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>
-                      Atualmente, faz uso de alguma medicação
-                      psiquiátrica?(Rivotril, Escitalopram, Sertralina,... )
-                    </FormLabel>
-                    <FormControl>
-                      <Textarea {...field} className="mt-2" />
-                    </FormControl>
-
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="voluntaryPsychologicalCare"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>
-                      Você buscaria, voluntariamente, atendimento psicológico,
-                      caso fosse de forma gratuita?
-                    </FormLabel>
-                    <FormControl>
-                      <Textarea {...field} className="mt-2" />
-                    </FormControl>
-
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="interactionObservations"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>
-                      Observações importantes percebidas na nossa interação com
-                      vocês (postura, comportamento, apresentação, atendimentos,
-                      etc ... )
-                    </FormLabel>
-                    <FormControl>
-                      <Textarea {...field} className="mt-2" />
-                    </FormControl>
-
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="psychologyTeamGuidance"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>
-                      Há alguma orientação específica que você gostaria de
-                      receber da equipe de Psicologia (ex: depressão, ansiedade,
-                      autocuidados...)
-                    </FormLabel>
-                    <FormControl>
-                      <Textarea {...field} className="mt-2" />
-                    </FormControl>
-
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="communitySuggestions"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>
-                      Na sua opinião, há algo que nós, do projeto, poderíamos
-                      ofertar para a comunidade?
-                    </FormLabel>
-                    <FormControl>
-                      <Textarea {...field} className="mt-2" />
-                    </FormControl>
-
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
             </div>
 
             <div className="mt-8 flex">

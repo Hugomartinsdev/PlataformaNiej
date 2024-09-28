@@ -146,322 +146,331 @@ export function FormResident({
   return (
     <>
       <div className="mt-10">
-        <Subheading>Informações básicas</Subheading>
+  <Subheading>Informações básicas</Subheading>
+  <Divider className="my-4" />
+
+  <Form {...form}>
+    <form onSubmit={form.handleSubmit(handleCreateMedic)}>
+      <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-5">
+        <FormField
+          control={form.control}
+          name="mainComplaint"
+          render={({ field }) => (
+            <FormItem className="col-span-2">
+              <FormLabel>Queixa Principal:</FormLabel><br />
+              <FormControl>
+                <Textarea {...field} className="mt-2" />
+              </FormControl>
+
+              <FormMessage className="mt-1 !text-red-500" />
+            </FormItem>
+          )}
+        />
+      </div>
+
+      <Divider className="my-4" />
+
+      <Subheading>Histórico Clínico:</Subheading>
+
+      <Divider className="my-4" />
+
+      <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-5">
+        <FormField
+          control={form.control}
+          name="associatedSystemicDiseases"
+          render={({ field }) => (
+            <FormItem className="col-span-2">
+              <FormLabel>Doenças sistêmicas associadas(Ex: Hipertensão, Diabetes, Cardiopatia, Outros)</FormLabel><br />
+              <FormControl>
+                <Input {...field} className="mt-2" />
+              </FormControl>
+
+              <FormMessage className="mt-1 !text-red-500" />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="currentMedications"
+          render={({ field }) => (
+            <FormItem className="col-span-2">
+              <FormLabel>Medicações em uso:</FormLabel><br />
+              <FormControl>
+                <Input {...field} className="mt-2" />
+              </FormControl>
+
+              <FormMessage className="mt-1 !text-red-500" />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="familyHistory"
+          render={({ field }) => (
+            <FormItem className="col-span-2">
+              <FormLabel>Antecedentes Familiares:</FormLabel><br />
+              <FormControl>
+                <Input {...field} className="mt-2" />
+              </FormControl>
+
+              <FormMessage className="mt-1 !text-red-500" />
+            </FormItem>
+          )}
+        />
+      </div>
+
+      <Divider className="my-4" />
+
+      <Subheading>Fatores de risco:</Subheading>
+
+      <Divider className="my-4" />
+
+      <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-5">
+        <FormField
+          control={form.control}
+          name="allergies"
+          render={({ field }) => (
+            <FormItem className="col-span-2">
+              <FormLabel>Tem alergias? Sim, quais?</FormLabel><br />
+              <FormControl>
+                <Input {...field} className="mt-2" />
+              </FormControl>
+
+              <FormMessage className="mt-1 !text-red-500" />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="alcoholUse"
+          render={({ field }) => (
+            <FormItem className="col-span-2">
+              <FormLabel>É etilista? Sim, quais?</FormLabel><br />
+              <FormControl>
+                <Input {...field} className="mt-2" />
+              </FormControl>
+
+              <FormMessage className="mt-1 !text-red-500" />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="smokingStatus"
+          render={({ field }) => (
+            <FormItem className="col-span-2">
+              <FormLabel>É tabagista? Sim, quais?</FormLabel><br />
+              <FormControl>
+                <Input {...field} className="mt-2" />
+              </FormControl>
+
+              <FormMessage className="mt-1 !text-red-500" />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="diet"
+          render={({ field }) => (
+            <FormItem className="col-span-2">
+              <FormLabel>
+                Dieta: Adequada ou Inadequada ( explique )
+              </FormLabel><br />
+              <FormControl>
+                <Input {...field} className="mt-2" />
+              </FormControl>
+
+              <FormMessage className="mt-1 !text-red-500" />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="waterIntake"
+          render={({ field }) => (
+            <FormItem className="col-span-2">
+              <FormLabel>Ingestão Hídrica</FormLabel><br />
+              <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <FormControl>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Selecione" />
+                  </SelectTrigger>
+                </FormControl>
+                <SelectContent>
+                  <SelectItem value="Adequada">Adequada</SelectItem>
+                  <SelectItem value="Inadequada">Inadequada</SelectItem>
+                  <SelectItem value="Desidratação">Desidratação</SelectItem>
+                </SelectContent>
+              </Select>
+
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        </div>
+
         <Divider className="my-4" />
 
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(handleCreateMedic)}>
-            <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-5">
-              <FormField
-                control={form.control}
-                name="mainComplaint"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>Queixa Principal:</FormLabel>
-                    <FormControl>
-                      <Textarea {...field} className="mt-2" />
-                    </FormControl>
+<Subheading>Sinais Vitais:</Subheading>
 
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
-            </div>
+<Divider className="my-4" />
 
-            <Divider className="my-4" />
+<div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-5">
+  <FormField
+    control={form.control}
+    name="bloodPressure"
+    render={({ field }) => (
+      <FormItem className="col-span-2">
+        <FormLabel>Pressão Arterial (PA):</FormLabel><br />
+        <FormControl>
+          <Input {...field} className="mt-2" />
+        </FormControl>
 
-            <Subheading>Histórico Clínico:</Subheading>
+        <FormMessage className="mt-1 !text-red-500" />
+      </FormItem>
+    )}
+  />
 
-            <Divider className="my-4" />
+  <FormField
+    control={form.control}
+    name="heartRate"
+    render={({ field }) => (
+      <FormItem className="col-span-2">
+        <FormLabel>Frequência Cardíaca (FC):</FormLabel><br />
+        <FormControl>
+          <Input {...field} className="mt-2" />
+        </FormControl>
 
-            <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-5">
-              <FormField
-                control={form.control}
-                name="associatedSystemicDiseases"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>Doenças sistêmicas associadas:</FormLabel>
-                    <FormControl>
-                      <Input {...field} className="mt-2" />
-                    </FormControl>
+        <FormMessage className="mt-1 !text-red-500" />
+      </FormItem>
+    )}
+  />
 
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
+  <FormField
+    control={form.control}
+    name="respiratoryRate"
+    render={({ field }) => (
+      <FormItem className="col-span-2">
+        <FormLabel>Frequência Respiratória (FR):</FormLabel><br />
+        <FormControl>
+          <Input {...field} className="mt-2" />
+        </FormControl>
 
-              <FormField
-                control={form.control}
-                name="currentMedications"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>Medicações em uso:</FormLabel>
-                    <FormControl>
-                      <Input {...field} className="mt-2" />
-                    </FormControl>
+        <FormMessage className="mt-1 !text-red-500" />
+      </FormItem>
+    )}
+  />
 
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
+  <FormField
+    control={form.control}
+    name="temperature"
+    render={({ field }) => (
+      <FormItem className="col-span-2">
+        <FormLabel>Temperatura (T):</FormLabel><br />
+        <FormControl>
+          <Input {...field} className="mt-2" />
+        </FormControl>
 
-              <FormField
-                control={form.control}
-                name="familyHistory"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>Antecedentes Familiares:</FormLabel>
-                    <FormControl>
-                      <Input {...field} className="mt-2" />
-                    </FormControl>
+        <FormMessage className="mt-1 !text-red-500" />
+      </FormItem>
+    )}
+  />
 
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
-            </div>
+  <FormField
+    control={form.control}
+    name="oxygenSaturation"
+    render={({ field }) => (
+      <FormItem className="col-span-2">
+        <FormLabel>Saturação de O2:</FormLabel><br />
+        <FormControl>
+          <Input {...field} className="mt-2" />
+        </FormControl>
 
-            <Divider className="my-4" />
+        <FormMessage className="mt-1 !text-red-500" />
+      </FormItem>
+    )}
+  />
 
-            <Subheading>Fatores de risco:</Subheading>
+  <FormField
+    control={form.control}
+    name="bloodGlucose"
+    render={({ field }) => (
+      <FormItem className="col-span-2">
+        <FormLabel>Glicemia Capilar:</FormLabel><br />
+        <FormControl>
+          <Input {...field} className="mt-2" />
+        </FormControl>
 
-            <Divider className="my-4" />
+        <FormMessage className="mt-1 !text-red-500" />
+      </FormItem>
+    )}
+  />
 
-            <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-5">
-              <FormField
-                control={form.control}
-                name="allergies"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>Tem alergias? Sim, quais?</FormLabel>
-                    <FormControl>
-                      <Input {...field} className="mt-2" />
-                    </FormControl>
+  <FormField
+    control={form.control}
+    name="painScale"
+    render={({ field }) => (
+      <FormItem className="col-span-2">
+        <FormLabel>Escala de Dor (0 a 10):</FormLabel><br />
+        <FormControl>
+          <Select onValueChange={field.onChange} defaultValue={field.value}>
+            <FormControl>
+              <SelectTrigger>
+                <SelectValue placeholder="Selecione" />
+              </SelectTrigger>
+            </FormControl>
+            <SelectContent>
+              {[...Array(11).keys()].map(value => (
+                <SelectItem key={value} value={value.toString()}>
+                  {value}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </FormControl>
 
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
+        <FormMessage className="mt-1 !text-red-500" />
+      </FormItem>
+    )}
+  />
 
-              <FormField
-                control={form.control}
-                name="alcoholUse"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>É etilista? Sim, quais?</FormLabel>
-                    <FormControl>
-                      <Input {...field} className="mt-2" />
-                    </FormControl>
+  <FormField
+    control={form.control}
+    name="painLocation"
+    render={({ field }) => (
+      <FormItem className="col-span-2">
+        <FormLabel>Localização da Dor:</FormLabel><br />
+        <FormControl>
+          <Textarea {...field} className="mt-2" />
+        </FormControl>
 
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
+        <FormMessage className="mt-1 !text-red-500" />
+      </FormItem>
+    )}
+  />
+</div>
 
-              <FormField
-                control={form.control}
-                name="smokingStatus"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>É tabagista? Sim, quais?</FormLabel>
-                    <FormControl>
-                      <Input {...field} className="mt-2" />
-                    </FormControl>
+<FormField
+  control={form.control}
+  name="generalObservations"
+  render={({ field }) => (
+    <FormItem className="col-span-2">
+      <FormLabel>Observações Gerais:</FormLabel><br />
+      <FormControl>
+        <Textarea {...field} className="mt-2" />
+      </FormControl>
 
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="diet"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>
-                      Dieta - Adequada - Inadequada ( explique )
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} className="mt-2" />
-                    </FormControl>
-
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="waterIntake"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>Ingestão Hídrica</FormLabel>
-                    <Select
-                      onValueChange={field.onChange}
-                      defaultValue={field.value}
-                    >
-                      <FormControl>
-                        <SelectTrigger>
-                          <SelectValue placeholder="Selecione" />
-                        </SelectTrigger>
-                      </FormControl>
-                      <SelectContent>
-                        <SelectItem value="Adequada">Adequada</SelectItem>
-                        <SelectItem value="Inadequada">Inadequada</SelectItem>
-                        <SelectItem value="Desidratação">
-                          Desidratação
-                        </SelectItem>
-                      </SelectContent>
-                    </Select>
-
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            </div>
-
-            <Divider className="my-4" />
-
-            <Subheading>Sinais Vitais:</Subheading>
-
-            <Divider className="my-4" />
-
-            <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-5">
-              <FormField
-                control={form.control}
-                name="bloodPressure"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>Pressão Arterial (PA):</FormLabel>
-                    <FormControl>
-                      <Input {...field} className="mt-2" />
-                    </FormControl>
-
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="heartRate"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>Frequência Cardíaca (FC):</FormLabel>
-                    <FormControl>
-                      <Input {...field} className="mt-2" />
-                    </FormControl>
-
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="respiratoryRate"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>Frequência Respiratória (FR):</FormLabel>
-                    <FormControl>
-                      <Input {...field} className="mt-2" />
-                    </FormControl>
-
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="temperature"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>Temperatura (T):</FormLabel>
-                    <FormControl>
-                      <Input {...field} className="mt-2" />
-                    </FormControl>
-
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="oxygenSaturation"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>Saturação de O2:</FormLabel>
-                    <FormControl>
-                      <Input {...field} className="mt-2" />
-                    </FormControl>
-
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="bloodGlucose"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>Glicemia Capilar:</FormLabel>
-                    <FormControl>
-                      <Input {...field} className="mt-2" />
-                    </FormControl>
-
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="painScale"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>Escala de Dor (0 a 10):</FormLabel>
-                    <FormControl>
-                      <Input {...field} className="mt-2" />
-                    </FormControl>
-
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="painLocation"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>Escala de Dor (0 a 10):</FormLabel>
-                    <FormControl>
-                      <Input {...field} className="mt-2" />
-                    </FormControl>
-
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="generalObservations"
-                render={({ field }) => (
-                  <FormItem className="col-span-2">
-                    <FormLabel>Observações Gerais:</FormLabel>
-                    <FormControl>
-                      <Textarea {...field} className="mt-2" />
-                    </FormControl>
-
-                    <FormMessage className="mt-1 !text-red-500" />
-                  </FormItem>
-                )}
-              />
-            </div>
+      <FormMessage className="mt-1 !text-red-500" />
+    </FormItem>
+  )}
+/>
+            
 
             <div className="mt-8 flex">
               <ButtonAnimated

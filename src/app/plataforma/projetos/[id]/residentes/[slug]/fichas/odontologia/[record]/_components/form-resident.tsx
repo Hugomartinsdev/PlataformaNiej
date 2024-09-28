@@ -169,435 +169,590 @@ export function FormResident({
   return (
     <>
       <div className="mt-10">
-        <Subheading>Informações básicas</Subheading>
-        <Divider className="my-4" />
+  <Subheading>Informações básicas</Subheading>
+  <Divider className="my-4" />
 
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(handleCreateMedic)}>
-            <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-5">
-              <FormField
-                control={form.control}
-                name="generalComplaint"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Queixa geral:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+  <Form {...form}>
+    <form onSubmit={form.handleSubmit(handleCreateMedic)}>
+      <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-5">
+        
+        <FormField
+          control={form.control}
+          name="generalComplaint"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Queixa geral:</FormLabel>
+              <FormControl>
+                <Input {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
 
-              <FormField
-                control={form.control}
-                name="toothPain"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Dor nos dentes?</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+        <FormField
+          control={form.control}
+          name="toothPain"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Dor nos dentes?</FormLabel> <br />
+              <FormControl>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Selecione" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="sim">Sim</SelectItem>
+                    <SelectItem value="nao">Não</SelectItem>
+                  </SelectContent>
+                </Select>
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
 
-              <FormField
-                control={form.control}
-                name="gumPain"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Dor na gengiva?</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+        <FormField
+          control={form.control}
+          name="gumPain"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Dor na gengiva?</FormLabel> <br />
+              <FormControl>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Selecione" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="sim">Sim</SelectItem>
+                    <SelectItem value="nao">Não</SelectItem>
+                  </SelectContent>
+                </Select>
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
 
-              <FormField
-                control={form.control}
-                name="bleedingGums"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Gengiva sangra ao escovar?</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+        <FormField
+          control={form.control}
+          name="bleedingGums"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Gengiva sangra ao escovar?</FormLabel> <br />
+              <FormControl>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Selecione" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="sim">Sim</SelectItem>
+                    <SelectItem value="nao">Não</SelectItem>
+                  </SelectContent>
+                </Select>
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
 
-              <FormField
-                control={form.control}
-                name="usesDentalFloss"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Usa fio dental?</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+        <FormField
+          control={form.control}
+          name="usesDentalFloss"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Usa fio dental?</FormLabel> <br />
+              <FormControl>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Selecione" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="sim">Sim</SelectItem>
+                    <SelectItem value="nao">Não</SelectItem>
+                  </SelectContent>
+                </Select>
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
 
-              <FormField
-                control={form.control}
-                name="usesToothpaste"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Usa creme dental:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="usesToothpaste"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Usa creme dental?</FormLabel> <br />
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="sim">Sim</SelectItem>
+            <SelectItem value="nao">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="brushingFrequency"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Escovação quantas vezes por dia?</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="brushingFrequency"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Escovação quantas vezes por dia?</FormLabel> <br />
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="1">1 vez</SelectItem>
+            <SelectItem value="2">2 vezes</SelectItem>
+            <SelectItem value="3">3 vezes</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="toothbrushType"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Tipo de escova:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="toothbrushType"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Tipo de escova:</FormLabel> <br />
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="individual">Individual</SelectItem>
+            <SelectItem value="coletiva">Coletiva</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="toothbrushReplacement"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Troca de escova:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="toothbrushReplacement"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Troca de escova:</FormLabel> <br />
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="todo mes">Todo mês</SelectItem>
+            <SelectItem value="2 em 2 meses">2 em 2 meses</SelectItem>
+            <SelectItem value="3 em 3 meses">3 em 3 meses</SelectItem>
+            <SelectItem value="nao sabe">Não sabe</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="usesPacifier"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Usa chupeta?</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="usesPacifier"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Usa chupeta?</FormLabel> <br />
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="sim">Sim</SelectItem>
+            <SelectItem value="nao">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="hasAllergy"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Alergia:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="hasAllergy"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Alergia:</FormLabel> <br />
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="sim">Sim</SelectItem>
+            <SelectItem value="nao">Não</SelectItem>
+            <SelectItem value="nao sabe">Não sabe</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="allergyDetails"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Qual alergia?</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="allergyDetails"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Qual alergia?</FormLabel> <br />
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="dentalTreatmentStatus"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Tratamento odontológico:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="dentalTreatmentStatus"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Tratamento odontológico:</FormLabel> <br />
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="concluido">Concluído</SelectItem>
+            <SelectItem value="pendente">Pendente</SelectItem>
+            <SelectItem value="em andamento">Em andamento</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="dentalTreatmentNotes"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Observações do tratamento odontológico:
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="dentalTreatmentNotes"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Observações do tratamento odontológico:</FormLabel> <br />
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="takesMedication"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Toma algum tipo de medicamento:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="takesMedication"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Toma algum tipo de medicamento?</FormLabel> <br />
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="sim">Sim</SelectItem>
+            <SelectItem value="nao">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="medicationDetails"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Qual medicamento?</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="medicationDetails"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Qual medicamento? <br /></FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="hasOtherIllness"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      É portador de alguma outra enfermidade?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="hasOtherIllness"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>É portador de alguma outra enfermidade? <br /></FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="sim">Sim</SelectItem>
+            <SelectItem value="nao">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="illnessDetails"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Qual enfermidade?</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="illnessDetails"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Qual enfermidade? <br /></FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="gumStatus"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Gengiva:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="gumStatus"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Gengiva: <br /></FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="normal">Normal</SelectItem>
+            <SelectItem value="alterada">Alterada</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="gumNotes"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Observações sobre a gengiva:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="gumNotes"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Observações sobre a gengiva: <br /></FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="buccalMucosaStatus"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Mucosa jugal:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="buccalMucosaStatus"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Mucosa jugal: <br /></FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="normal">Normal</SelectItem>
+            <SelectItem value="alterada">Alterada</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="buccalMucosaNotes"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Observações sobre a mucosa jugal:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="buccalMucosaNotes"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Observações sobre a mucosa jugal: <br /></FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="palateStatus"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Palato:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="palateStatus"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Palato: <br /></FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="normal">Normal</SelectItem>
+            <SelectItem value="alterada">Alterada</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="palateNotes"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Observações sobre o palato:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="palateNotes"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Observações sobre o palato: <br /></FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="floorOfMouthStatus"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Assoalho:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="floorOfMouthStatus"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Assoalho: <br /></FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="normal">Normal</SelectItem>
+            <SelectItem value="alterada">Alterada</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="floorOfMouthNotes"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Observações sobre o assoalho:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="floorOfMouthNotes"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Observações sobre o assoalho: <br /></FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="tongueStatus"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Língua:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="tongueStatus"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Língua: <br /></FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="normal">Normal</SelectItem>
+            <SelectItem value="alterada">Alterada</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="tongueNotes"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Observações sobre a língua:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="tongueNotes"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Observações sobre a língua: <br /></FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="fluorosisStatus"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Fluorose:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="fluorosisStatus"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Fluorose: <br /></FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="normal">Normal</SelectItem>
+            <SelectItem value="alterada">Alterada</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
-              <FormField
-                control={form.control}
-                name="fluorosisNotes"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Observações sobre fluorose:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+<FormField
+  control={form.control}
+  name="fluorosisNotes"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Observações sobre fluorose: <br /></FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
 
               <Subheading>2- ODONTOGRAMA</Subheading>
               <Odontogram

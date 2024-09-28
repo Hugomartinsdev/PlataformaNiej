@@ -276,1236 +276,1530 @@ export function FormResident({
         <Form {...form}>
           <form onSubmit={form.handleSubmit(handleCreateMedic)}>
             <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-5">
-              <FormField
-                control={form.control}
-                name="currentWeight"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Peso atual:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="height"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Altura:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="bmi"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>IMC:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="bmiClassification"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Classificação:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="waistCircumference"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Circunferência da cintura:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="hipCircumference"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Circunferência do quadril:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="calfCircumference"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Circunferência da panturrilha:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="armCircumference"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Circunferência do braço:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="nutritionistVisit"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Já foi em um nutricionista?</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="previousSurgery"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Já fez alguma cirurgia?</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="surgeryDetails"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Qual cirurgia?</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="smoking"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Tabagismo?</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="alcoholism"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Alcoolismo?</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="obesity"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Obesidade?</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="obesityInFamily"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Há obesos na família?</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="obesityFamilyMembers"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Quem na família é obeso?</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="diabetesInFamily"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Há diabético na família?</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="diabetesFamilyMembers"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Quem na família é diabético?</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="diabetic"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Você é diabético(a)?</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="insulinUse"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Faz uso de insulina?</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="cholesterol"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Colesterol</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="alteredTriglycerides"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Triglicérides alterado</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="convulsions"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Convulsões</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="gastricProblems"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Problemas gástricos</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="anxiety"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Ansiedade</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="heartProblems"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Problemas cardíacos</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="otherPathologies"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Outros:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="foodInsecurityConcern"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Nos últimos três meses, você teve a preocupação de que a
-                      comida da sua casa acabasse antes que tivesse dinheiro
-                      para comprar mais comida?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="foodShortage"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Nos últimos três meses, os alimentos acabaram antes que
-                      você tivesse dinheiro para comprar mais comida?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="healthyFoodLack"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Nos últimos três meses, você ficou sem dinheiro para ter
-                      uma alimentação saudável e variada?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="limitedFoodVariety"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Nos últimos três meses, você comeu apenas alguns poucos
-                      tipos de alimentos que ainda tinham, porque o dinheiro
-                      acabou?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="mealSkipping"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Nos últimos três meses, você deixou de fazer alguma
-                      refeição porque não havia dinheiro para comprar comida?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="reducedFoodIntake"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Nos últimos três meses, você comeu menos do que achou que
-                      devia, porque não havia dinheiro para comprar comida?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="hungerDueToLackOfMoney"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Nos últimos três meses, você sentiu fome mas não comeu
-                      porque não tinha dinheiro para comprar comida?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="fullDayWithoutFood"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Nos últimos três meses, você ficou um dia inteiro sem
-                      comer ou teve apenas uma refeição ao dia porque não tinha
-                      dinheiro para comprar a comida?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="wakeUpTime"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      De manhã, que horas você costuma acordar?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="bedTime"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      De noite, que horas você costuma dormir?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="breathingDifficulty"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Você tem dificuldade para respirar?</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="sleepingDifficulty"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Você tem alguma dificuldade ou desconforto para dormir? Se
-                      sim, qual ou quais?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="sleepMedication"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Toma alguma medicação que interfira no sono?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="sleepMedicationDetails"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Qual medicação para o sono?</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="physicalActivity"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Você pratica alguma atividade física?</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="physicalActivityDetails"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Se sim, qual ou quais atividades físicas?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="weeklyPhysicalActivityHours"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Quantas horas você gasta fazendo atividades físicas
-                      durante a semana?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="physicalActivityIntensity"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Qual a intensidade das suas atividades ao terminá-las?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="mood"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Qual seu sentimento/humor na maior parte do tempo?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="smokingHabit"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Você fuma?</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="alcoholConsumption"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Você bebe? Quantas vezes durante a semana?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="diabetesDiagnosis"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Você é diagnosticado com diabetes?</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="familyDiabetesDiagnosis"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Alguém na família é diagnosticado com diabetes?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="dailyWaterIntake"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Quantos copos (200ml) com água você bebe no dia?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="waterSource"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      A água que você bebe é potável, filtrada, fervida ou
-                      tratada com algum produto?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="urineColor"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Qual a cor da sua urina?</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="abdominalPain"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Você sente dor abdominal ocorrendo pelo menos 1x na semana
-                      nos últimos 3 meses?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="stoolAppearance"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Qual é o aspecto predominante das suas fezes?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="stoolColor"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Qual a cor normalmente das suas fezes?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="stoolFloating"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      As suas fezes normalmente boiam ou afundam?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="stoolConsistencyVariation"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Nos últimos 3 meses qual foi a frequência que suas fezes
-                      variam entre tipo 1 e 2?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="bowelMovementFrequency"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Nos últimos 3 meses, qual foi a frequência das suas
-                      evacuações?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="defecationDifficulty"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Nos últimos 3 meses, qual foi a frequência no seu
-                      intestino ou no seu ânus que lhe impediu de evacuar?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="anorectalDifficulties"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Nos últimos 3 meses, você teve dificuldades (ANORRETAL)
-                      como esforço, desconforto ou dor para conseguir evacuar?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="laxativeUse"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Nos últimos 3 meses, você teve o hábito de usar laxantes,
-                      enemas ou as mãos para conseguir evacuar?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="vitaminSupplementation"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Você toma algum suplemento vitamínico ou mineral? Qual?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="healthConditionsAffectingDiet"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Você possui alguma condição de saúde que possa afetar sua
-                      alimentação? Qual?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="dietaryRestrictions"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Você possui alguma restrição alimentar ou alergia? Qual?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="dailyMeals"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Quantas refeições você faz ao longo do dia sem contar os
-                      lanches?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="breakfastFoods"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Quais os alimentos que você costuma comer no café da
-                      manhã?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="lunchFoods"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Quais os alimentos que você costuma comer no almoço?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="dinnerFoods"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Quais alimentos você costuma comer no jantar?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="snackingHabits"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Você lancha entre as refeições principais? Se sim, o que
-                      você costuma comer?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="fruitConsumption"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Você tem o costume de comer frutas? Se sim, qual ou quais?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="vegetableConsumption"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Você tem o costume de comer legumes? Se sim, qual ou
-                      quais?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="handWashingHabits"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Você tem o costume de lavar suas mãos antes das refeições
-                      e antes de manusear/preparar os alimentos?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="handWashingHabits"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Você tem o costume de lavar suas mãos antes das refeições
-                      e antes de manusear/preparar os alimentos?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <h2>Recordatório 24 horas:</h2>
-
-              <FormField
-                control={form.control}
-                name="breakfastRecall"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Café da manhã:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="morningSnackRecall"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Lanche da manhã:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="lunchRecall"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Almoço:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="afternoonSnackRecall"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Lanche da tarde:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="dinnerRecall"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Janta:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="eveningSnackRecall"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Ceia:</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+            <FormField
+  control={form.control}
+  name="currentWeight"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Peso atual:<br /></FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="height"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Altura:<br /></FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="bmi"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>IMC:<br /></FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="bmiClassification"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Classificação:<br /></FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="waistCircumference"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Circunferência da cintura:<br /></FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="hipCircumference"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Circunferência do quadril:<br /></FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="calfCircumference"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Circunferência da panturrilha:<br /></FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="armCircumference"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Circunferência do braço:<br /></FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="nutritionistVisit"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Já foi em um nutricionista?<br /></FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <FormControl>
+            <SelectTrigger>
+              <SelectValue placeholder="Selecione" />
+            </SelectTrigger>
+          </FormControl>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="previousSurgery"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Já fez alguma cirurgia?<br /></FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <FormControl>
+            <SelectTrigger>
+              <SelectValue placeholder="Selecione" />
+            </SelectTrigger>
+          </FormControl>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="surgeryDetails"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Qual cirurgia:<br /></FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="smoking"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Tabagismo?<br /></FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <FormControl>
+            <SelectTrigger>
+              <SelectValue placeholder="Selecione" />
+            </SelectTrigger>
+          </FormControl>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+
+<FormField
+  control={form.control}
+  name="alcoholism"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Alcoolismo?<br /></FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <FormControl>
+            <SelectTrigger>
+              <SelectValue placeholder="Selecione" />
+            </SelectTrigger>
+          </FormControl>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="obesity"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Obesidade?<br /></FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <FormControl>
+            <SelectTrigger>
+              <SelectValue placeholder="Selecione" />
+            </SelectTrigger>
+          </FormControl>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="obesityInFamily"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Há obesos na família?<br /></FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <FormControl>
+            <SelectTrigger>
+              <SelectValue placeholder="Selecione" />
+            </SelectTrigger>
+          </FormControl>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="obesityFamilyMembers"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Quem na família é obeso?<br /></FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="diabetesInFamily"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Há diabético na família?<br /></FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <FormControl>
+            <SelectTrigger>
+              <SelectValue placeholder="Selecione" />
+            </SelectTrigger>
+          </FormControl>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="diabetesFamilyMembers"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Quem na família é diabético?<br /></FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="diabetic"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Você é diabético(a)?<br /></FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <FormControl>
+            <SelectTrigger>
+              <SelectValue placeholder="Selecione" />
+            </SelectTrigger>
+          </FormControl>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="insulinUse"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Faz uso de insulina?<br /></FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <FormControl>
+            <SelectTrigger>
+              <SelectValue placeholder="Selecione" />
+            </SelectTrigger>
+          </FormControl>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="cholesterol"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Colesterol:<br /></FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+
+<FormField
+  control={form.control}
+  name="alteredTriglycerides"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Triglicérides alterado<br /></FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <FormControl>
+            <SelectTrigger>
+              <SelectValue placeholder="Selecione" />
+            </SelectTrigger>
+          </FormControl>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="convulsions"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Convulsões<br /></FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <FormControl>
+            <SelectTrigger>
+              <SelectValue placeholder="Selecione" />
+            </SelectTrigger>
+          </FormControl>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="gastricProblems"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Problemas gástricos<br /></FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <FormControl>
+            <SelectTrigger>
+              <SelectValue placeholder="Selecione" />
+            </SelectTrigger>
+          </FormControl>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="anxiety"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Ansiedade<br /></FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <FormControl>
+            <SelectTrigger>
+              <SelectValue placeholder="Selecione" />
+            </SelectTrigger>
+          </FormControl>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="heartProblems"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Problemas cardíacos<br /></FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <FormControl>
+            <SelectTrigger>
+              <SelectValue placeholder="Selecione" />
+            </SelectTrigger>
+          </FormControl>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="otherPathologies"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Outros:<br /></FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="foodInsecurityConcern"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Nos últimos três meses, você teve a preocupação de que a comida da sua casa acabasse antes que tivesse dinheiro para comprar mais comida?<br />
+      </FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <FormControl>
+            <SelectTrigger>
+              <SelectValue placeholder="Selecione" />
+            </SelectTrigger>
+          </FormControl>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="foodShortage"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Nos últimos três meses, os alimentos acabaram antes que você tivesse dinheiro para comprar mais comida?<br />
+      </FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <FormControl>
+            <SelectTrigger>
+              <SelectValue placeholder="Selecione" />
+            </SelectTrigger>
+          </FormControl>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="healthyFoodLack"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Nos últimos três meses, você ficou sem dinheiro para ter uma alimentação saudável e variada?<br />
+      </FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <FormControl>
+            <SelectTrigger>
+              <SelectValue placeholder="Selecione" />
+            </SelectTrigger>
+          </FormControl>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="limitedFoodVariety"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Nos últimos três meses, você comeu apenas alguns poucos tipos de alimentos que ainda tinham, porque o dinheiro acabou?<br />
+      </FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <FormControl>
+            <SelectTrigger>
+              <SelectValue placeholder="Selecione" />
+            </SelectTrigger>
+          </FormControl>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="mealSkipping"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Nos últimos três meses, você deixou de fazer alguma refeição porque não havia dinheiro para comprar comida?<br />
+      </FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <FormControl>
+            <SelectTrigger>
+              <SelectValue placeholder="Selecione" />
+            </SelectTrigger>
+          </FormControl>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="reducedFoodIntake"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Nos últimos três meses, você comeu menos do que achou que devia, porque não havia dinheiro para comprar comida?<br />
+      </FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <FormControl>
+            <SelectTrigger>
+              <SelectValue placeholder="Selecione" />
+            </SelectTrigger>
+          </FormControl>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="hungerDueToLackOfMoney"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Nos últimos três meses, você sentiu fome mas não comeu porque não tinha dinheiro para comprar comida?<br />
+      </FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="fullDayWithoutFood"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Nos últimos três meses, você ficou um dia inteiro sem comer ou teve apenas uma refeição ao dia porque não tinha dinheiro para comprar a comida?<br />
+      </FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="wakeUpTime"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        De manhã, que horas você costuma acordar?<br />
+      </FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="bedTime"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        De noite, que horas você costuma dormir?<br />
+      </FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="breathingDifficulty"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Você tem dificuldade para respirar?<br /></FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="sleepingDifficulty"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Você tem alguma dificuldade ou desconforto para dormir? Se sim, qual ou quais?<br />
+      </FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="sleepMedication"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Toma alguma medicação que interfira no sono?<br />
+      </FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="sleepMedicationDetails"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Qual medicação para o sono?<br /></FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="physicalActivity"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Você pratica alguma atividade física?<br /></FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="physicalActivityDetails"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Se sim, qual ou quais atividades físicas?<br />
+      </FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="weeklyPhysicalActivityHours"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Quantas horas você gasta fazendo atividades físicas durante a semana?<br />
+      </FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="physicalActivityIntensity"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Qual a intensidade das suas atividades ao terminá-las?<br />
+      </FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="mood"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Qual seu sentimento/humor na maior parte do tempo?<br />
+      </FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="smokingHabit"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Você fuma?<br /></FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="alcoholConsumption"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Você bebe? Quantas vezes durante a semana?<br />
+      </FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="diabetesDiagnosis"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Você é diagnosticado com diabetes?<br /></FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="familyDiabetesDiagnosis"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Alguém na família é diagnosticado com diabetes?<br />
+      </FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="dailyWaterIntake"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Quantos copos (200ml) com água você bebe no dia?<br />
+      </FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="waterSource"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        A água que você bebe é potável, filtrada, fervida ou tratada com algum produto?<br />
+      </FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="urineColor"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Qual a cor da sua urina? (Ex: transparente, branca ou turva, amarelo palha (muito claro), amarelo transparente, amarelo escuro, âmbaroumel, laranja, rosa ou avermelhada, acastanhada, azulado ou esverdeado, não sabe)
+<br /></FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="abdominalPain"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Você sente dor abdominal ocorrendo pelo menos 1x na semana nos últimos 3 meses?<br />
+      </FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="stoolAppearance"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Qual é o aspecto predominante das suas fezes?<br />
+      </FormLabel>
+      <FormControl>
+       <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="tipo 1">partes duras separadas(difíceis de evacuar)</SelectItem>
+            <SelectItem value="tipo 2">grumoso, duro, em forma de salsicha</SelectItem>
+            <SelectItem value="tipo 3">mesmo formato do 2°com fendas na superfície</SelectItem>
+            <SelectItem value="tipo 4">mesmo formato do 2° ou cobra; liso e macio</SelectItem>
+            <SelectItem value="tipo 5">manchas macias com bordas bem definidas (fáceis de passar)</SelectItem>
+            <SelectItem value="tipo 6">pedaços fofos com bordas irregulares; moles</SelectItem>
+            <SelectItem value="tipo 7">totalmente líquido, aquoso, sem partes sólidas</SelectItem>
+            <SelectItem value="nao sabe">nao sabe</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="stoolColor"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Qual a cor normalmente das suas fezes?<br />
+      </FormLabel>
+      <FormControl>
+      <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="marrom com pontos brancos">marrom com pontos brancos</SelectItem>
+            <SelectItem value=" marrom"> marrom</SelectItem>
+            <SelectItem value="amarelo claro">amarelo claro</SelectItem>
+            <SelectItem value="avermelhadas">avermelhadas</SelectItem>
+            <SelectItem value=" esverdeadas"> esverdeadas</SelectItem>
+            <SelectItem value="escuras ou negras">escuras ou negras</SelectItem>
+            <SelectItem value="não sabe"> não sabe</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="stoolFloating"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        As suas fezes normalmente boiam ou afundam?<br />
+      </FormLabel>
+      <FormControl>
+      <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="boiam">boiam</SelectItem>
+            <SelectItem value="afundam">afundam</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+
+<FormField
+  control={form.control}
+  name="stoolConsistencyVariation"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Nos últimos 3 meses qual foi a frequência que suas fezes variam entre tipo 1 e 2?<br />
+      </FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="bowelMovementFrequency"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Nos últimos 3 meses, qual foi a frequência das suas evacuações?<br />
+      </FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="defecationDifficulty"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Nos últimos 3 meses, qual foi a frequência no seu intestino ou no seu ânus que lhe impediu de evacuar?<br />
+      </FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="anorectalDifficulties"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Nos últimos 3 meses, você teve dificuldades (ANORRETAL) como esforço, desconforto ou dor para conseguir evacuar?<br />
+      </FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="laxativeUse"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Nos últimos 3 meses, você teve o hábito de usar laxantes, enemas ou as mãos para conseguir evacuar?<br />
+      </FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="vitaminSupplementation"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Você toma algum suplemento vitamínico ou mineral? Qual?<br />
+      </FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="healthConditionsAffectingDiet"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Você possui alguma condição de saúde que possa afetar sua alimentação? Qual?<br />
+      </FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="dietaryRestrictions"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Você possui alguma restrição alimentar ou alergia? Qual?<br />
+      </FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="dailyMeals"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Quantas refeições você faz ao longo do dia sem contar os lanches?<br />
+      </FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="breakfastFoods"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Quais os alimentos que você costuma comer no café da manhã?<br />
+      </FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="lunchFoods"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Quais os alimentos que você costuma comer no almoço?<br />
+      </FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="dinnerFoods"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Quais alimentos você costuma comer no jantar?<br />
+      </FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="snackingHabits"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Você lancha entre as refeições principais? Se sim, o que você costuma comer?<br />
+      </FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="fruitConsumption"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Você tem o costume de comer frutas? Se sim, qual ou quais?<br />
+      </FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="vegetableConsumption"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Você tem o costume de comer legumes? Se sim, qual ou quais?<br />
+      </FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="handWashingHabits"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Você tem o costume de lavar suas mãos antes das refeições e antes de manusear/preparar os alimentos?<br />
+      </FormLabel>
+      <FormControl>
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="Sim">Sim</SelectItem>
+            <SelectItem value="Não">Não</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+
+<h2>Recordatório 24 horas:</h2>
+
+<FormField
+  control={form.control}
+  name="breakfastRecall"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Café da manhã:<br /></FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="morningSnackRecall"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Lanche da manhã:<br /></FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="lunchRecall"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Almoço:<br /></FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="afternoonSnackRecall"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Lanche da tarde:<br /></FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="dinnerRecall"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Janta:<br /></FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="eveningSnackRecall"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Ceia:<br /></FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
             </div>
 
             <div className="mt-8 flex">
