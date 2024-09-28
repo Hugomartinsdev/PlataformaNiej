@@ -14,7 +14,7 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
 export async function SignIn(email: string, password: string) {
-  const response = await fetch("https://niej.vercel.app/api", {
+  const response = await fetch("https://plataforma-lotus-mu.vercel.app/api", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
