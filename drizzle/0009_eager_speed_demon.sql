@@ -1,0 +1,1 @@
+ALTER TABLE "plataforma-niej_dental_evaluation" ADD COLUMN "odontogram" jsonb;

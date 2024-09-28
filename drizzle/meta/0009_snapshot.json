@@ -1,0 +1,2027 @@
+{
+  "id": "fd364111-136d-45ac-8829-5a561ab22fdd",
+  "prevId": "ba6f4978-76bb-4b30-8829-554c00bd6645",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.plataforma-niej_dental_evaluation": {
+      "name": "plataforma-niej_dental_evaluation",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar(256)",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "resident_id": {
+          "name": "resident_id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "project_id": {
+          "name": "project_id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "general_complaint": {
+          "name": "general_complaint",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "tooth_pain": {
+          "name": "tooth_pain",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "gum_pain": {
+          "name": "gum_pain",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "bleeding_gums": {
+          "name": "bleeding_gums",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "uses_dental_floss": {
+          "name": "uses_dental_floss",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "uses_toothpaste": {
+          "name": "uses_toothpaste",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "brushing_frequency": {
+          "name": "brushing_frequency",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "toothbrush_type": {
+          "name": "toothbrush_type",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "toothbrush_replacement": {
+          "name": "toothbrush_replacement",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "uses_pacifier": {
+          "name": "uses_pacifier",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "has_allergy": {
+          "name": "has_allergy",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "allergy_details": {
+          "name": "allergy_details",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dental_treatment_status": {
+          "name": "dental_treatment_status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dental_treatment_notes": {
+          "name": "dental_treatment_notes",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "takes_medication": {
+          "name": "takes_medication",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "medication_details": {
+          "name": "medication_details",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "has_other_illness": {
+          "name": "has_other_illness",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "illness_details": {
+          "name": "illness_details",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "gum_status": {
+          "name": "gum_status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "gum_notes": {
+          "name": "gum_notes",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "buccal_mucosa_status": {
+          "name": "buccal_mucosa_status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "buccal_mucosa_notes": {
+          "name": "buccal_mucosa_notes",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "palate_status": {
+          "name": "palate_status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "palate_notes": {
+          "name": "palate_notes",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "floor_of_mouth_status": {
+          "name": "floor_of_mouth_status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "floor_of_mouth_notes": {
+          "name": "floor_of_mouth_notes",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "tongue_status": {
+          "name": "tongue_status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "tongue_notes": {
+          "name": "tongue_notes",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "fluorosis_status": {
+          "name": "fluorosis_status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "fluorosis_notes": {
+          "name": "fluorosis_notes",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "odontogram": {
+          "name": "odontogram",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "CURRENT_TIMESTAMP"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.plataforma-niej_law": {
+      "name": "plataforma-niej_law",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar(256)",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "resident_id": {
+          "name": "resident_id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "project_id": {
+          "name": "project_id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "message": {
+          "name": "message",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "CURRENT_TIMESTAMP"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.plataforma-niej_medical_care": {
+      "name": "plataforma-niej_medical_care",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar(256)",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "resident_id": {
+          "name": "resident_id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "project_id": {
+          "name": "project_id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "weight": {
+          "name": "weight",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "height": {
+          "name": "height",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "bmi": {
+          "name": "bmi",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "main_complaint": {
+          "name": "main_complaint",
+          "type": "varchar(500)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "evolution": {
+          "name": "evolution",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "isda": {
+          "name": "isda",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "physical_exam": {
+          "name": "physical_exam",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "geral": {
+          "name": "geral",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cardiovascular": {
+          "name": "cardiovascular",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "pulmonary": {
+          "name": "pulmonary",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "abdomen": {
+          "name": "abdomen",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "diagnostic_hypothesis": {
+          "name": "diagnostic_hypothesis",
+          "type": "varchar(500)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "treatment_plan": {
+          "name": "treatment_plan",
+          "type": "varchar(500)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "CURRENT_TIMESTAMP"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.plataforma-niej_medical_evaluation": {
+      "name": "plataforma-niej_medical_evaluation",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar(256)",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "resident_id": {
+          "name": "resident_id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "project_id": {
+          "name": "project_id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "occupation": {
+          "name": "occupation",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "responsible": {
+          "name": "responsible",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "kinship": {
+          "name": "kinship",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "clinical_diagnosis": {
+          "name": "clinical_diagnosis",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "main_complaint": {
+          "name": "main_complaint",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "functional_complaint": {
+          "name": "functional_complaint",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "current_disease_history": {
+          "name": "current_disease_history",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "medications": {
+          "name": "medications",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "personal_history": {
+          "name": "personal_history",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "lifestyle_habits": {
+          "name": "lifestyle_habits",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "pain_assessment": {
+          "name": "pain_assessment",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "pain_intensity": {
+          "name": "pain_intensity",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "pain_location": {
+          "name": "pain_location",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "pain_frequency": {
+          "name": "pain_frequency",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "pain_characteristics": {
+          "name": "pain_characteristics",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "pain_interference": {
+          "name": "pain_interference",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "patient_presentation": {
+          "name": "patient_presentation",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "weight": {
+          "name": "weight",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "height": {
+          "name": "height",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "bmi": {
+          "name": "bmi",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "blood_pressure": {
+          "name": "blood_pressure",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "heart_rate": {
+          "name": "heart_rate",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "respiratory_rate": {
+          "name": "respiratory_rate",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "oxygen_saturation": {
+          "name": "oxygen_saturation",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "pulmonary_auscultation": {
+          "name": "pulmonary_auscultation",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "postural_assessment": {
+          "name": "postural_assessment",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "specific_inspection": {
+          "name": "specific_inspection",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "neurological_exam": {
+          "name": "neurological_exam",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ashworth_scale": {
+          "name": "ashworth_scale",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "romberg_test": {
+          "name": "romberg_test",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "unilateral_balance_test": {
+          "name": "unilateral_balance_test",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "get_up_and_go_test": {
+          "name": "get_up_and_go_test",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "katz_index": {
+          "name": "katz_index",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "fall_history": {
+          "name": "fall_history",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "fear_of_falling": {
+          "name": "fear_of_falling",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "time_up_and_go": {
+          "name": "time_up_and_go",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "fall_risk": {
+          "name": "fall_risk",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "tandem_gait": {
+          "name": "tandem_gait",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "obstetric_history": {
+          "name": "obstetric_history",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "gynecological_history": {
+          "name": "gynecological_history",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "urinary_symptoms": {
+          "name": "urinary_symptoms",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "sexual_function": {
+          "name": "sexual_function",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "anorectal_evaluation": {
+          "name": "anorectal_evaluation",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "CURRENT_TIMESTAMP"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.plataforma-niej_nursing_triage": {
+      "name": "plataforma-niej_nursing_triage",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar(256)",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "resident_id": {
+          "name": "resident_id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "project_id": {
+          "name": "project_id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "main_complaint": {
+          "name": "main_complaint",
+          "type": "varchar(500)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "associated_systemic_diseases": {
+          "name": "associated_systemic_diseases",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "current_medications": {
+          "name": "current_medications",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "family_history": {
+          "name": "family_history",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "allergies": {
+          "name": "allergies",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "alcohol_use": {
+          "name": "alcohol_use",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "smoking_status": {
+          "name": "smoking_status",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "diet": {
+          "name": "diet",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "water_intake": {
+          "name": "water_intake",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "blood_pressure": {
+          "name": "blood_pressure",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "heart_rate": {
+          "name": "heart_rate",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "respiratory_rate": {
+          "name": "respiratory_rate",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "temperature": {
+          "name": "temperature",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "oxygen_saturation": {
+          "name": "oxygen_saturation",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "blood_glucose": {
+          "name": "blood_glucose",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "pain_scale": {
+          "name": "pain_scale",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "pain_location": {
+          "name": "pain_location",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "general_observations": {
+          "name": "general_observations",
+          "type": "varchar(500)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "CURRENT_TIMESTAMP"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.plataforma-niej_nutrition_screening": {
+      "name": "plataforma-niej_nutrition_screening",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar(256)",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "resident_id": {
+          "name": "resident_id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "project_id": {
+          "name": "project_id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "current_weight": {
+          "name": "current_weight",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "height": {
+          "name": "height",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "bmi": {
+          "name": "bmi",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "bmi_classification": {
+          "name": "bmi_classification",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "waist_circumference": {
+          "name": "waist_circumference",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "hip_circumference": {
+          "name": "hip_circumference",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "calf_circumference": {
+          "name": "calf_circumference",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "arm_circumference": {
+          "name": "arm_circumference",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nutritionist_visit": {
+          "name": "nutritionist_visit",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "previous_surgery": {
+          "name": "previous_surgery",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "surgery_details": {
+          "name": "surgery_details",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "smoking": {
+          "name": "smoking",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "alcoholism": {
+          "name": "alcoholism",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "obesity": {
+          "name": "obesity",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "obesity_in_family": {
+          "name": "obesity_in_family",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "obesity_family_members": {
+          "name": "obesity_family_members",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "diabetes_in_family": {
+          "name": "diabetes_in_family",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "diabetes_family_members": {
+          "name": "diabetes_family_members",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "diabetic": {
+          "name": "diabetic",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "insulin_use": {
+          "name": "insulin_use",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cholesterol": {
+          "name": "cholesterol",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "altered_triglycerides": {
+          "name": "altered_triglycerides",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "convulsions": {
+          "name": "convulsions",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "gastric_problems": {
+          "name": "gastric_problems",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "anxiety": {
+          "name": "anxiety",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "heart_problems": {
+          "name": "heart_problems",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "other_pathologies": {
+          "name": "other_pathologies",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "food_insecurity_concern": {
+          "name": "food_insecurity_concern",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "food_shortage": {
+          "name": "food_shortage",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "healthy_food_lack": {
+          "name": "healthy_food_lack",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "limited_food_variety": {
+          "name": "limited_food_variety",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "meal_skipping": {
+          "name": "meal_skipping",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "reduced_food_intake": {
+          "name": "reduced_food_intake",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "hunger_due_to_lack_of_money": {
+          "name": "hunger_due_to_lack_of_money",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "full_day_without_food": {
+          "name": "full_day_without_food",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "wake_up_time": {
+          "name": "wake_up_time",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "bed_time": {
+          "name": "bed_time",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "breathing_difficulty": {
+          "name": "breathing_difficulty",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "sleeping_difficulty": {
+          "name": "sleeping_difficulty",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "sleep_medication": {
+          "name": "sleep_medication",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "sleep_medication_details": {
+          "name": "sleep_medication_details",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "physical_activity": {
+          "name": "physical_activity",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "physical_activity_details": {
+          "name": "physical_activity_details",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "weekly_physical_activity_hours": {
+          "name": "weekly_physical_activity_hours",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "physical_activity_intensity": {
+          "name": "physical_activity_intensity",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "mood": {
+          "name": "mood",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "smoking_habit": {
+          "name": "smoking_habit",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "alcohol_consumption": {
+          "name": "alcohol_consumption",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "diabetes_diagnosis": {
+          "name": "diabetes_diagnosis",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "family_diabetes_diagnosis": {
+          "name": "family_diabetes_diagnosis",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "daily_water_intake": {
+          "name": "daily_water_intake",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "water_source": {
+          "name": "water_source",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "urine_color": {
+          "name": "urine_color",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "abdominal_pain": {
+          "name": "abdominal_pain",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "stool_appearance": {
+          "name": "stool_appearance",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "stool_color": {
+          "name": "stool_color",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "stool_floating": {
+          "name": "stool_floating",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "stool_consistency_variation": {
+          "name": "stool_consistency_variation",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "bowel_movement_frequency": {
+          "name": "bowel_movement_frequency",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "defecation_difficulty": {
+          "name": "defecation_difficulty",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "anorectal_difficulties": {
+          "name": "anorectal_difficulties",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "laxative_use": {
+          "name": "laxative_use",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "vitamin_supplementation": {
+          "name": "vitamin_supplementation",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "health_conditions_affecting_diet": {
+          "name": "health_conditions_affecting_diet",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dietary_restrictions": {
+          "name": "dietary_restrictions",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "daily_meals": {
+          "name": "daily_meals",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "breakfast_foods": {
+          "name": "breakfast_foods",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "lunch_foods": {
+          "name": "lunch_foods",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dinner_foods": {
+          "name": "dinner_foods",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "snacking_habits": {
+          "name": "snacking_habits",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "fruit_consumption": {
+          "name": "fruit_consumption",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "vegetable_consumption": {
+          "name": "vegetable_consumption",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "hand_washing_habits": {
+          "name": "hand_washing_habits",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "breakfast_recall": {
+          "name": "breakfast_recall",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "morning_snack_recall": {
+          "name": "morning_snack_recall",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "lunch_recall": {
+          "name": "lunch_recall",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "afternoon_snack_recall": {
+          "name": "afternoon_snack_recall",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dinner_recall": {
+          "name": "dinner_recall",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "evening_snack_recall": {
+          "name": "evening_snack_recall",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "CURRENT_TIMESTAMP"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.plataforma-niej_project_members": {
+      "name": "plataforma-niej_project_members",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "project_id": {
+          "name": "project_id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "user_id": {
+          "name": "user_id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "role": {
+          "name": "role",
+          "type": "role_project",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'member'"
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "CURRENT_TIMESTAMP"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.plataforma-niej_projects": {
+      "name": "plataforma-niej_projects",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar(256)",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "logo": {
+          "name": "logo",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "banner": {
+          "name": "banner",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "description": {
+          "name": "description",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "CURRENT_TIMESTAMP"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.plataforma-niej_psychology_triage": {
+      "name": "plataforma-niej_psychology_triage",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar(256)",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "resident_id": {
+          "name": "resident_id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "project_id": {
+          "name": "project_id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "leisure_opportunities_evaluation": {
+          "name": "leisure_opportunities_evaluation",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "sleep_evaluation": {
+          "name": "sleep_evaluation",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "diet_evaluation": {
+          "name": "diet_evaluation",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "physical_activity": {
+          "name": "physical_activity",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "routine_description": {
+          "name": "routine_description",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "personal_time_well_being": {
+          "name": "personal_time_well_being",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "current_feelings": {
+          "name": "current_feelings",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "support_system": {
+          "name": "support_system",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "current_feeling_description": {
+          "name": "current_feeling_description",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "stress_level": {
+          "name": "stress_level",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "stress_coping": {
+          "name": "stress_coping",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nervousness_frequency": {
+          "name": "nervousness_frequency",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "sadness_frequency": {
+          "name": "sadness_frequency",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "psychological_care": {
+          "name": "psychological_care",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "psychiatric_care": {
+          "name": "psychiatric_care",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "psychiatric_medication_use": {
+          "name": "psychiatric_medication_use",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "voluntary_psychological_care": {
+          "name": "voluntary_psychological_care",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "interaction_observations": {
+          "name": "interaction_observations",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "psychology_team_guidance": {
+          "name": "psychology_team_guidance",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "community_suggestions": {
+          "name": "community_suggestions",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "CURRENT_TIMESTAMP"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.plataforma-niej_residents": {
+      "name": "plataforma-niej_residents",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar(256)",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "project_id": {
+          "name": "project_id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "social_name": {
+          "name": "social_name",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "mother_name": {
+          "name": "mother_name",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "birth_date": {
+          "name": "birth_date",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "residence_info": {
+          "name": "residence_info",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "gender_identity": {
+          "name": "gender_identity",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ethnic_racial_identification": {
+          "name": "ethnic_racial_identification",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "quilombola": {
+          "name": "quilombola",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "sus_card_number": {
+          "name": "sus_card_number",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "contact_phone": {
+          "name": "contact_phone",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cpf": {
+          "name": "cpf",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "rg": {
+          "name": "rg",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "marital_status": {
+          "name": "marital_status",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dependents": {
+          "name": "dependents",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "CURRENT_TIMESTAMP"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.plataforma-niej_sociodemographic_questionnaire": {
+      "name": "plataforma-niej_sociodemographic_questionnaire",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar(256)",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "resident_id": {
+          "name": "resident_id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "project_id": {
+          "name": "project_id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "house_electricity": {
+          "name": "house_electricity",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "stable_electricity": {
+          "name": "stable_electricity",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "stable_electricity_observations": {
+          "name": "stable_electricity_observations",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "bathroom_count": {
+          "name": "bathroom_count",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "sewer_system": {
+          "name": "sewer_system",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "garbage_disposal": {
+          "name": "garbage_disposal",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "internet_connection": {
+          "name": "internet_connection",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "drinking_water_source": {
+          "name": "drinking_water_source",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "domestic_water_source": {
+          "name": "domestic_water_source",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "tourist_activity": {
+          "name": "tourist_activity",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "entrepreneurship_incentives": {
+          "name": "entrepreneurship_incentives",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "own_transportation": {
+          "name": "own_transportation",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cooperative_knowledge": {
+          "name": "cooperative_knowledge",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "local_collectives": {
+          "name": "local_collectives",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "main_income_source": {
+          "name": "main_income_source",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "additional_income_source": {
+          "name": "additional_income_source",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "monthly_family_income": {
+          "name": "monthly_family_income",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "entrepreneurship_desire": {
+          "name": "entrepreneurship_desire",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "entrepreneurship_training": {
+          "name": "entrepreneurship_training",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "training_interest": {
+          "name": "training_interest",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "public_security": {
+          "name": "public_security",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "literacy_status": {
+          "name": "literacy_status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "education_level": {
+          "name": "education_level",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "CURRENT_TIMESTAMP"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.plataforma-niej_users": {
+      "name": "plataforma-niej_users",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar(256)",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "avatar": {
+          "name": "avatar",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "email": {
+          "name": "email",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "password": {
+          "name": "password",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "enroll": {
+          "name": "enroll",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "role": {
+          "name": "role",
+          "type": "role",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'user'"
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "CURRENT_TIMESTAMP"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "plataforma-niej_users_email_unique": {
+          "name": "plataforma-niej_users_email_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "email"
+          ]
+        }
+      }
+    }
+  },
+  "enums": {
+    "public.role": {
+      "name": "role",
+      "schema": "public",
+      "values": [
+        "admin",
+        "user"
+      ]
+    },
+    "public.role_project": {
+      "name": "role_project",
+      "schema": "public",
+      "values": [
+        "member",
+        "coordinator",
+        "area_coordinator",
+        "guest"
+      ]
+    }
+  },
+  "schemas": {},
+  "sequences": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}
