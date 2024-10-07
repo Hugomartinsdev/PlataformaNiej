@@ -7,7 +7,7 @@ import {
   UserNotFoundError,
 } from "@/lib/errors";
 import { db } from "@/server/db";
-import { nursingTriageSchema } from "@/server/db/schema";
+import { nursingTriageSchema} from "@/server/db/schema";
 import { eq } from "drizzle-orm";
 
 export async function GetNursingTriage(id: string) {

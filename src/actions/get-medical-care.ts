@@ -7,7 +7,7 @@ import {
   UserNotFoundError,
 } from "@/lib/errors";
 import { db } from "@/server/db";
-import { medicalCareSchema, nursingTriageSchema } from "@/server/db/schema";
+import { medicalCareSchema} from "@/server/db/schema";
 import { eq } from "drizzle-orm";
 
 export async function GetMedicalCare(id: string) {
@@ -15,20 +15,20 @@ export async function GetMedicalCare(id: string) {
     throw new UnauthorizedError();
   }
 
-  const GetMedicalCareQuery = await db
+  const MedicalCareQuery = await db
     .select()
     .from(medicalCareSchema)
     .where(eq(medicalCareSchema.id, id));
 
-  if (!GetMedicalCareQuery) {
+  if (!MedicalCareQuery) {
     throw new UserNotFoundError();
   }
 
-  if (GetMedicalCareQuery.length === 0) {
+  if (MedicalCareQuery.length === 0) {
     throw new UserNotFoundError();
   }
 
-  const medicalCare = GetMedicalCareQuery[0];
+  const medicalCare = MedicalCareQuery[0];
 
   return medicalCare;
 }
