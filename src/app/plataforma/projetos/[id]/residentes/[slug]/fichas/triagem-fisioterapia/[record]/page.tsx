@@ -2,7 +2,7 @@ import { Heading } from "@/components/ui/heading";
 import { GoBackButton } from "./_components/go-back-button";
 import { FormResident, ResidentType } from "./_components/form-resident";
 import { getResident } from "@/actions/get-resident";
-import { GetMedicalEvaluation } from "@/actions/get.fisio";
+import { GetMedicalEvaluation } from "@/actions/get-fisio";
 
 export default async function Page({
   params,
