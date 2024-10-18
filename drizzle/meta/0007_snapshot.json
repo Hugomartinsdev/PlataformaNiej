@@ -26,9 +26,227 @@
           "primaryKey": false,
           "notNull": true
         },
-        "message": {
-          "name": "message",
+
+      
+        "birth_registration": {
+          "name": "birth_registration",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        
+        "assistencial_benefits": {
+          "name": "assistencial_benefits",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+
+        "benefits_details": {
+          "name": "benefits_details",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "retirement": {
+          "name": "retirement",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+
+        "Pension": {
+          "name": "Pension",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+
+        "pension_details": {
+          "name": "pension_details",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+
+        "alimentic_pension": {
+          "name": "alimentic_pension",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "alimentic_pension_details": {
+          "name": "alimentic_pension_details",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "imovel_or_terrain_regulantion": {
+          "name": "imovel_or_terrain_regulantion",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+
+        "imovel_or_terrain_regulantion_details": {
+          "name": "imovel_or_terrain_regulantion_details",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "juducial_alvara": {
+          "name": "juducial_alvara",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "extra_judicial_agreement": {
+          "name": "extra_judicial_agreement",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "executiv_title": {
+          "name": "executiv_title",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+
+        "paternity_recognition": {
+          "name": "paternity_recognition",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "paternity_contestation": {
+          "name": "paternity_contestation",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "child_custody": {
+          "name": "child_custody",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "stable_union": {
+          "name": "stable_union",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+
+        "guardianship_or_curatorship": {
+          "name": "guardianship_or_curatorship",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+
+        "undue_charge": {
+          "name": "undue_charge",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+
+        "undue_charge_details": {
+          "name": "undue_charge_details",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+
+        "documents_emission": {
+          "name": "documents_emission",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+
+        "others": {
+          "name": "others",
           "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+
+        "children_involved": {
+          "name": "children_involved",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+
+        "elderly_involved": {
+          "name": "elderly_involved",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+
+        "pcd_involved": {
+          "name": "pcd_involved",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+
+        "urgency": {
+          "name": "urgency",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+
+        "documents_or_evidences": {
+          "name": "documents_or_evidences",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+
+        "previous_legal_guidance": {
+          "name": "previous_legal_guidance",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+
+        "public_defense": {
+          "name": "public_defense",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+
+
+        "police_station": {
+          "name": "police_station",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+
+        "goverment_secretary": {
+          "name": "goverment_secretary",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+
+        "cras_access": {
+          "name": "cras_access",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+
+        "caduni_tel_number": {
+          "name": "caduni_tel_number",
+          "type": "varchar(256)",
           "primaryKey": false,
           "notNull": false
         },

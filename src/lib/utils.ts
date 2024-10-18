@@ -15,4 +15,4 @@ export function NormalizeTextToSlug(text: string) {
   const slug = text.replace(" ", "-").toLowerCase();
 
   return slug;
-}
+}//ver se o erro da url não pode ser feita acrescentanto mais uma função aqui
