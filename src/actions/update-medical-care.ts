@@ -9,7 +9,7 @@ import { eq } from "drizzle-orm";
 export async function UpdateMedicalCare({
   medicalCare,
 }: {
-  medicalCare: MedicalCareType;
+  medicalCare: MedicalCareType;//criar um type para fisioterapia, mas ta pegando sem, então...
 }) {
   if (!medicalCare.id) {
     throw new InternalServerError();

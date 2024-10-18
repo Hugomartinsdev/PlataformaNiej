@@ -39,8 +39,9 @@ import { toast } from "sonner";
 import { Textarea } from "@/components/ui/textarea";
 import { UpdateNursingTriage } from "@/actions/update-nursing-triage";
 import { CreateNursingTriage } from "@/actions/create-nursing-triage";
-import { UpdateMedicalCare } from "@/actions/update-medical-care";
 import { CreateMedicalCare } from "@/actions/create-medical-care";
+import { UpdateMedicalCare } from "@/actions/update-medical-care";
+import { UpdatemedicalEvaluation } from "@/actions/update-fisio";
 import { CreateFisio } from "@/actions/create-fisio";
 
 const formSchema = z.object({

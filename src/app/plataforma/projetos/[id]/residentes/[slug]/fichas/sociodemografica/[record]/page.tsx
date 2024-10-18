@@ -3,6 +3,7 @@ import { GoBackButton } from "./_components/go-back-button";
 import { FormResident, ResidentType } from "./_components/form-resident";
 import { getResident } from "@/actions/get-resident";
 import { GetMedicalCare } from "@/actions/get-nursing-triage";
+import { GetSociodemographicQuestionnaire } from "@/actions/get-sociodemographic";
 
 export default async function Page({
   params,
@@ -11,7 +12,7 @@ export default async function Page({
 }) {
   const isCreating = params.record === "novo";
 
-  const resident = isCreating ? null : await GetMedicalCare(params.record);
+  const resident = isCreating ? null : await GetSociodemographicQuestionnaire(params.record);
 
   return (
     <>

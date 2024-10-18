@@ -42,6 +42,7 @@ import { CreateNursingTriage } from "@/actions/create-nursing-triage";
 import { UpdateMedicalCare } from "@/actions/update-medical-care";
 import { CreateMedicalCare } from "@/actions/create-medical-care";
 import { CreateSociodemographi } from "@/actions/create-sociodemographic";
+import { UpdateSociodemographicQuestionnaire } from "@/actions/update-sociodemographic";
 
 const formSchema = z.object({
   houseElectricity: z.string().optional(),
