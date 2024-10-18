@@ -11,8 +11,8 @@ export function NormalizeTextToSearch(text: string) {
   return search;
 }
 
-export function NormalizeTextToSlug(text: string) {
-  const slug = text.replace(" ", "-").toLowerCase();
+export function NormalizeTextToSlug(text: string) {//é aqui o erro, para tirar o ç e o ~
+  const slug = text.replace(" ", "-").toLowerCase().replace("ç", "c").toLowerCase().replace("ã", "a").toLowerCase();
 
   return slug;
-}//ver se o erro da url não pode ser feita acrescentanto mais uma função aqui
+}
