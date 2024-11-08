@@ -1,9 +1,236 @@
 {
-  "id": "60bb2cfb-7094-4a4a-aac3-b27183a173d1",
-  "prevId": "b86b893e-027c-4fef-95ef-0d92490298e0",
+  "id": "2c9ff527-de4a-47ca-9d1b-777c075a834d",
+  "prevId": "fd364111-136d-45ac-8829-5a561ab22fdd",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
+    "public.plataforma-niej_dental_evaluation": {
+      "name": "plataforma-niej_dental_evaluation",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar(256)",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "resident_id": {
+          "name": "resident_id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "project_id": {
+          "name": "project_id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "general_complaint": {
+          "name": "general_complaint",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "tooth_pain": {
+          "name": "tooth_pain",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "gum_pain": {
+          "name": "gum_pain",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "bleeding_gums": {
+          "name": "bleeding_gums",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "uses_dental_floss": {
+          "name": "uses_dental_floss",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "uses_toothpaste": {
+          "name": "uses_toothpaste",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "brushing_frequency": {
+          "name": "brushing_frequency",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "toothbrush_type": {
+          "name": "toothbrush_type",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "toothbrush_replacement": {
+          "name": "toothbrush_replacement",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "uses_pacifier": {
+          "name": "uses_pacifier",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "has_allergy": {
+          "name": "has_allergy",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "allergy_details": {
+          "name": "allergy_details",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dental_treatment_status": {
+          "name": "dental_treatment_status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dental_treatment_notes": {
+          "name": "dental_treatment_notes",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "takes_medication": {
+          "name": "takes_medication",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "medication_details": {
+          "name": "medication_details",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "has_other_illness": {
+          "name": "has_other_illness",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "illness_details": {
+          "name": "illness_details",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "gum_status": {
+          "name": "gum_status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "gum_notes": {
+          "name": "gum_notes",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "buccal_mucosa_status": {
+          "name": "buccal_mucosa_status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "buccal_mucosa_notes": {
+          "name": "buccal_mucosa_notes",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "palate_status": {
+          "name": "palate_status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "palate_notes": {
+          "name": "palate_notes",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "floor_of_mouth_status": {
+          "name": "floor_of_mouth_status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "floor_of_mouth_notes": {
+          "name": "floor_of_mouth_notes",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "tongue_status": {
+          "name": "tongue_status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "tongue_notes": {
+          "name": "tongue_notes",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "fluorosis_status": {
+          "name": "fluorosis_status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "fluorosis_notes": {
+          "name": "fluorosis_notes",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "odontogram": {
+          "name": "odontogram",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "CURRENT_TIMESTAMP"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
     "public.plataforma-niej_law": {
       "name": "plataforma-niej_law",
       "schema": "",
@@ -26,9 +253,207 @@
           "primaryKey": false,
           "notNull": true
         },
-        "message": {
-          "name": "message",
+        "birth_registration": {
+          "name": "birth_registration",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "assistencial_benefits": {
+          "name": "assistencial_benefits",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "benefits_details": {
+          "name": "benefits_details",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "retirement": {
+          "name": "retirement",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "Pension": {
+          "name": "Pension",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "pension_details": {
+          "name": "pension_details",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "alimentic_pension": {
+          "name": "alimentic_pension",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "alimentic_pension_details": {
+          "name": "alimentic_pension_details",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "imovel_or_terrain_regulantion": {
+          "name": "imovel_or_terrain_regulantion",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "imovel_or_terrain_regulantion_details": {
+          "name": "imovel_or_terrain_regulantion_details",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "juducial_alvara": {
+          "name": "juducial_alvara",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "extra_judicial_agreement": {
+          "name": "extra_judicial_agreement",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "executiv_title": {
+          "name": "executiv_title",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "paternity_recognition": {
+          "name": "paternity_recognition",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "paternity_contestation": {
+          "name": "paternity_contestation",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "child_custody": {
+          "name": "child_custody",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "divorce": {
+          "name": "divorce",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "stable_union": {
+          "name": "stable_union",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "guardianship_or_curatorship": {
+          "name": "guardianship_or_curatorship",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "undue_charge": {
+          "name": "undue_charge",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "undue_charge_details": {
+          "name": "undue_charge_details",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "documents_emission": {
+          "name": "documents_emission",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "others": {
+          "name": "others",
           "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "children_involved": {
+          "name": "children_involved",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "elderly_involved": {
+          "name": "elderly_involved",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "pcd_involved": {
+          "name": "pcd_involved",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "urgency": {
+          "name": "urgency",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "documents_or_evidences": {
+          "name": "documents_or_evidences",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "previous_legal_guidance": {
+          "name": "previous_legal_guidance",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "public_defense": {
+          "name": "public_defense",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "police_station": {
+          "name": "police_station",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "goverment_secretary": {
+          "name": "goverment_secretary",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cras_access": {
+          "name": "cras_access",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "caduni_tel_number": {
+          "name": "caduni_tel_number",
+          "type": "varchar(256)",
           "primaryKey": false,
           "notNull": false
         },
@@ -676,6 +1101,12 @@
           "primaryKey": false,
           "notNull": false
         },
+        "rcq": {
+          "name": "rcq",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
         "calf_circumference": {
           "name": "calf_circumference",
           "type": "text",
@@ -798,6 +1229,18 @@
         },
         "other_pathologies": {
           "name": "other_pathologies",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "weight_loss": {
+          "name": "weight_loss",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "serius_or_discomfort": {
+          "name": "serius_or_discomfort",
           "type": "text",
           "primaryKey": false,
           "notNull": false
