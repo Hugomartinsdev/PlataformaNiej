@@ -324,7 +324,7 @@ export function FormResident({
   name="height"
   render={({ field }) => (
     <FormItem>
-      <FormLabel>Altura:<br /></FormLabel>
+      <FormLabel>Altura (em metros, colocar ponto no lugar da virgula):<br /></FormLabel>
       <FormControl>
         <Input {...field}
           onChange={(e) => {
