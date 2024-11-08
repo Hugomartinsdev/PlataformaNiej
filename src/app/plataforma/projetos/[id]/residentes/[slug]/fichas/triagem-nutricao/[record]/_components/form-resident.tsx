@@ -5,6 +5,7 @@ import { CheckIcon, Loader } from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import React, { useEffect } from 'react';
 
 import { ButtonAnimated } from "@/components/ui/ButtonAnimated";
 import { Divider } from "@/components/ui/divider";
@@ -225,6 +226,7 @@ export function FormResident({
       eveningSnackRecall: data?.eveningSnackRecall || "",
     },
   });
+  //const a; a='height';
 
   async function handleCreateMedic(formData: z.infer<typeof formSchema>) {
     if (data) {
@@ -283,7 +285,34 @@ export function FormResident({
     <FormItem>
       <FormLabel>Peso atual:<br /></FormLabel>
       <FormControl>
-        <Input {...field} />
+        <Input {...field}
+            onChange={(e) => {
+              field.onChange(e);
+              // Garantir que o valor seja um número válido antes de calcular
+              const weight = parseFloat(e.target.value);
+              const height = parseFloat(form.getValues("height") || "0"); // Defina um valor default caso seja undefined
+              if (!isNaN(weight) && !isNaN(height) && height !== 0) {
+                const bmi = (weight / (height * height)).toFixed(2);
+                form.setValue("bmi", bmi);// Atualizar o campo BMI
+                if(bmi < "18.5"){
+                  form.setValue("bmiClassification","Abaixo do peso")
+                }else if(bmi > "18.4" && bmi < "25.0"){
+                  form.setValue("bmiClassification","Peso normal")
+                }
+                else if(bmi > "24.9" && bmi < "30.0"){
+                  form.setValue("bmiClassification","Sobrepeso")
+                }else if(bmi > "29.9" && bmi < "35.0"){
+                  form.setValue("bmiClassification","Obesidade grau 1")
+                }else if(bmi > "34.9" && bmi < "40.0"){
+                  form.setValue("bmiClassification","Obesidade grau 2")
+                }else{
+                  form.setValue("bmiClassification","Obesidade grau 3")
+                }
+              } else {
+                form.setValue("bmi", ""); // Limpar o campo BMI se a altura ou peso não forem válidos
+              }
+              
+            }} />
       </FormControl>
       <FormMessage />
     </FormItem>
@@ -297,7 +326,33 @@ export function FormResident({
     <FormItem>
       <FormLabel>Altura:<br /></FormLabel>
       <FormControl>
-        <Input {...field} />
+        <Input {...field}
+          onChange={(e) => {
+            field.onChange(e);
+            // Garantir que o valor seja um número válido antes de calcular
+            const height = parseFloat(e.target.value);
+            const weight = parseFloat(form.getValues("currentWeight") || "0"); // Defina um valor default caso seja undefined
+            if (!isNaN(weight) && !isNaN(height) && height !== 0) {
+              const bmi = (weight / (height * height)).toFixed(2);
+              form.setValue("bmi", bmi);// Atualizar o campo BMI
+              if(bmi < "18.5"){
+                form.setValue("bmiClassification","Abaixo do peso")
+              }else if(bmi > "18.4" && bmi < "25.0"){
+                form.setValue("bmiClassification","Peso normal")
+              }
+              else if(bmi > "24.9" && bmi < "30.0"){
+                form.setValue("bmiClassification","Sobrepeso")
+              }else if(bmi > "29.9" && bmi < "35.0"){
+                form.setValue("bmiClassification","Obesidade grau 1")
+              }else if(bmi > "34.9" && bmi < "40.0"){
+                form.setValue("bmiClassification","Obesidade grau 2")
+              }else{
+                form.setValue("bmiClassification","Obesidade grau 3")
+              }
+            } else {
+              form.setValue("bmi", ""); // Limpar o campo BMI se a altura ou peso não forem válidos
+            }
+          }} />
       </FormControl>
       <FormMessage />
     </FormItem>
@@ -311,7 +366,7 @@ export function FormResident({
     <FormItem>
       <FormLabel>IMC:<br /></FormLabel>
       <FormControl>
-        <Input {...field} />
+        <Input {...field} readOnly/>
       </FormControl>
       <FormMessage />
     </FormItem>
@@ -325,35 +380,58 @@ export function FormResident({
     <FormItem>
       <FormLabel>Classificação:<br /></FormLabel>
       <FormControl>
-        <Input {...field} />
+        <Input {...field} readOnly />
       </FormControl>
       <FormMessage />
     </FormItem>
   )}
 />
-
-<FormField
+<FormField //EM FASES DE TESTE, TALVEZ POSSA SER DESATIVADO POR MEDO DE PERDA DE DADOS DO BANCO DE DADOS
   control={form.control}
   name="waistCircumference"
   render={({ field }) => (
     <FormItem>
       <FormLabel>Circunferência da cintura:<br /></FormLabel>
       <FormControl>
-        <Input {...field} />
+        <Input {...field} 
+        /*onChange={(e) => {
+          field.onChange(e);
+          // Garantir que o valor seja um número válido antes de calcular
+          const waist = parseFloat(e.target.value);
+          const hip = parseFloat(form.getValues("hipCircumference") || "0"); // Defina um valor default caso seja undefined
+          if (!isNaN(waist) && !isNaN(hip) && hip !== 0) {
+            const calfCircumference = (waist / hip).toFixed(2);
+            form.setValue("calfCircumference", calfCircumference); // Atualizar o campo BMI
+          } else {
+            form.setValue("calfCircumference", ""); // Limpar o campo BMI se a altura ou peso não forem válidos
+          }
+        }}*/ />
       </FormControl>
       <FormMessage />
     </FormItem>
   )}
 />
 
-<FormField
+<FormField //EM FASES DE TESTE, TALVEZ POSSA SER DESATIVADO POR MEDO DE PERDA DE DADOS DO BANCO DE DADOS
   control={form.control}
   name="hipCircumference"
   render={({ field }) => (
     <FormItem>
       <FormLabel>Circunferência do quadril:<br /></FormLabel>
       <FormControl>
-        <Input {...field} />
+        <Input {...field} 
+         /*onChange={(e) => {
+          field.onChange(e);
+          // Garantir que o valor seja um número válido antes de calcular
+          const waist = parseFloat(form.getValues("waistCircumference") || "0");
+          const hip = parseFloat(e.target.value); // Defina um valor default caso seja undefined
+          if (!isNaN(waist) && !isNaN(hip) && hip !== 0) {
+            const calfCircumference = (waist / hip).toFixed(2);
+            form.setValue("calfCircumference", calfCircumference); // Atualizar o campo BMI
+          } else {
+            form.setValue("calfCircumference", ""); // Limpar o campo BMI se a altura ou peso não forem válidos
+          } QUANDO FOR ATIVAR CRIAR UM FORM FIELD E UMA TUPLA NO BANCO DE DADOS, so copiar a do IMC DETAILS
+        }}*//>
       </FormControl>
       <FormMessage />
     </FormItem>
