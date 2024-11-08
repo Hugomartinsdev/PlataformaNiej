@@ -13,8 +13,8 @@ import { verify } from "argon2";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
-export async function SignIn(email: string, password: string) {
-  const response = await fetch("https://plataforma-lotus-mu.vercel.app/api", {
+export async function SignIn(email: string, password: string) {//https://plataforma-niej-mu.vercel.app/api
+  const response = await fetch("https://plataforma-niej-mu.vercel.app/api", {//https://plataforma-lotus-mu.vercel.app/api
     method: "POST",
     headers: {
       "Content-Type": "application/json",
