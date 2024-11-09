@@ -101,6 +101,14 @@ CREATE TABLE IF NOT EXISTS "plataforma-niej_nutrition_screening" (
 	"observation_intestinal" text,
 	"snack" text,
 	"alimental_pain" text,
+	"Observations_road_habits" text,
+  	"obsevation_clinical_history" text,
+  	"observation_family_history" text,
+  	"bloodPressure" text,
+  	"SAT_O2" text,
+  	"observation_health_markers" text,
+  	"observation_anthropometric_measurements" text,
+  	"Observation_water_intake" text,
 	"created_at" timestamp DEFAULT CURRENT_TIMESTAMP NOT NULL,
 	"updated_at" timestamp
 );

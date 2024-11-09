@@ -145,6 +145,14 @@ const formSchema = z.object({
   observationIntestinal: z.string().optional(),
   snack: z.string().optional(),
   alimentalPain: z.string().optional(),
+  Observations_road_habits: z.string().optional(), // coisas novas
+  obsevation_clinical_history: z.string().optional(),
+  observation_family_history: z.string().optional(),
+  bloodPressure: z.string().optional(),
+  SAT_O2: z.string().optional(),
+  observation_health_markers: z.string().optional(),
+  observation_anthropometric_measurements: z.string().optional(),
+  Observation_water_intake: z.string().optional(),
 });
 
 export type ResidentType = z.infer<typeof formSchema> & {
@@ -264,6 +272,15 @@ export function FormResident({
       observationIntestinal:data?.eveningSnackRecall || "",
       snack:data?.eveningSnackRecall || "",
       alimentalPain: data?.eveningSnackRecall || "",
+      Observations_road_habits:data?.Observations_road_habits || "", // coisas novas
+      obsevation_clinical_history:data?.obsevation_clinical_history || "",
+      observation_family_history:data?.observation_family_history || "",
+      bloodPressure:data?.bloodPressure || "",
+      SAT_O2:data?.SAT_O2 || "",
+      observation_health_markers:data?.observation_health_markers || "",
+      observation_anthropometric_measurements:data?.observation_anthropometric_measurements || "",
+      Observation_water_intake:data?.Observation_water_intake || "",
+
     },
   });
 
@@ -311,22 +328,75 @@ export function FormResident({
   return (
     <>
       <div className="mt-10">
-        <Subheading>Informações básicas</Subheading>
+        <Subheading>Hábitos de vida</Subheading>
         <Divider className="my-4" />
 
         <Form {...form}>
           <form onSubmit={form.handleSubmit(handleCreateMedic)}>
             <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-5">
-            <FormField
+
+<FormField
   control={form.control}
   name="wakeUpTime"
   render={({ field }) => (
     <FormItem>
-      <FormLabel>
-        De manhã, que horas você costuma acordar?<br />
-      </FormLabel>
+      <FormLabel>De manhã, que horas você costuma acordar?<br /></FormLabel>
       <FormControl>
-        <Input {...field} />
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+          <SelectItem value="00:00">00:00</SelectItem>
+              <SelectItem value="00:30">00:30</SelectItem>
+              <SelectItem value="01:00">01:00</SelectItem>
+              <SelectItem value="01:30">01:30</SelectItem>
+              <SelectItem value="02:00">02:00</SelectItem>
+              <SelectItem value="02:30">02:30</SelectItem>
+              <SelectItem value="03:00">03:00</SelectItem>
+              <SelectItem value="03:30">03:30</SelectItem>
+              <SelectItem value="04:00">04:00</SelectItem>
+              <SelectItem value="04:30">04:30</SelectItem>
+              <SelectItem value="05:00">05:00</SelectItem>
+              <SelectItem value="05:30">05:30</SelectItem>
+              <SelectItem value="06:00">06:00</SelectItem>
+              <SelectItem value="06:30">06:30</SelectItem>
+              <SelectItem value="07:00">07:00</SelectItem>
+              <SelectItem value="07:30">07:30</SelectItem>
+              <SelectItem value="08:00">08:00</SelectItem>
+              <SelectItem value="08:30">08:30</SelectItem>
+              <SelectItem value="09:00">09:00</SelectItem>
+              <SelectItem value="09:30">09:30</SelectItem>
+              <SelectItem value="10:00">10:00</SelectItem>
+              <SelectItem value="10:30">10:30</SelectItem>
+              <SelectItem value="11:00">11:00</SelectItem>
+              <SelectItem value="11:30">11:30</SelectItem>
+              <SelectItem value="12:00">12:00</SelectItem>
+              <SelectItem value="12:30">12:30</SelectItem>
+              <SelectItem value="13:00">13:00</SelectItem>
+              <SelectItem value="13:30">13:30</SelectItem>
+              <SelectItem value="14:00">14:00</SelectItem>
+              <SelectItem value="14:30">14:30</SelectItem>
+              <SelectItem value="15:00">15:00</SelectItem>
+              <SelectItem value="15:30">15:30</SelectItem>
+              <SelectItem value="16:00">16:00</SelectItem>
+              <SelectItem value="16:30">16:30</SelectItem>
+              <SelectItem value="17:00">17:00</SelectItem>
+              <SelectItem value="17:30">17:30</SelectItem>
+              <SelectItem value="18:00">18:00</SelectItem>
+              <SelectItem value="18:30">18:30</SelectItem>
+              <SelectItem value="19:00">19:00</SelectItem>
+              <SelectItem value="19:30">19:30</SelectItem>
+              <SelectItem value="20:00">20:00</SelectItem>
+              <SelectItem value="20:30">20:30</SelectItem>
+              <SelectItem value="21:00">21:00</SelectItem>
+              <SelectItem value="21:30">21:30</SelectItem>
+              <SelectItem value="22:00">22:00</SelectItem>
+              <SelectItem value="22:30">22:30</SelectItem>
+              <SelectItem value="23:00">23:00</SelectItem>
+              <SelectItem value="23:30">23:30</SelectItem>
+          </SelectContent>
+        </Select>
       </FormControl>
       <FormMessage />
     </FormItem>
@@ -338,47 +408,61 @@ export function FormResident({
   name="bedTime"
   render={({ field }) => (
     <FormItem>
-      <FormLabel>
-        De noite, que horas você costuma dormir?<br />
-      </FormLabel>
-      <FormControl>
-        <Input {...field} />
-      </FormControl>
-      <FormMessage />
-    </FormItem>
-  )}
-/>
-
-<FormField
-  control={form.control}
-  name="sleepingDifficulty"
-  render={({ field }) => (
-    <FormItem>
-      <FormLabel>
-        Você tem alguma dificuldade ou desconforto para dormir? Se sim, qual ou quais?<br />
-      </FormLabel>
-      <FormControl>
-        <Input {...field} />
-      </FormControl>
-      <FormMessage />
-    </FormItem>
-  )}
-/>
-
-<FormField
-  control={form.control}
-  name="physicalActivity"
-  render={({ field }) => (
-    <FormItem>
-      <FormLabel>Você pratica alguma atividade física?<br /></FormLabel>
+      <FormLabel>De noite, que horas você costuma dormir?<br /></FormLabel>
       <FormControl>
         <Select onValueChange={field.onChange} defaultValue={field.value}>
           <SelectTrigger>
             <SelectValue placeholder="Selecione" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="Sim">Sim</SelectItem>
-            <SelectItem value="Não">Não</SelectItem>
+          <SelectItem value="00:00">00:00</SelectItem>
+              <SelectItem value="00:30">00:30</SelectItem>
+              <SelectItem value="01:00">01:00</SelectItem>
+              <SelectItem value="01:30">01:30</SelectItem>
+              <SelectItem value="02:00">02:00</SelectItem>
+              <SelectItem value="02:30">02:30</SelectItem>
+              <SelectItem value="03:00">03:00</SelectItem>
+              <SelectItem value="03:30">03:30</SelectItem>
+              <SelectItem value="04:00">04:00</SelectItem>
+              <SelectItem value="04:30">04:30</SelectItem>
+              <SelectItem value="05:00">05:00</SelectItem>
+              <SelectItem value="05:30">05:30</SelectItem>
+              <SelectItem value="06:00">06:00</SelectItem>
+              <SelectItem value="06:30">06:30</SelectItem>
+              <SelectItem value="07:00">07:00</SelectItem>
+              <SelectItem value="07:30">07:30</SelectItem>
+              <SelectItem value="08:00">08:00</SelectItem>
+              <SelectItem value="08:30">08:30</SelectItem>
+              <SelectItem value="09:00">09:00</SelectItem>
+              <SelectItem value="09:30">09:30</SelectItem>
+              <SelectItem value="10:00">10:00</SelectItem>
+              <SelectItem value="10:30">10:30</SelectItem>
+              <SelectItem value="11:00">11:00</SelectItem>
+              <SelectItem value="11:30">11:30</SelectItem>
+              <SelectItem value="12:00">12:00</SelectItem>
+              <SelectItem value="12:30">12:30</SelectItem>
+              <SelectItem value="13:00">13:00</SelectItem>
+              <SelectItem value="13:30">13:30</SelectItem>
+              <SelectItem value="14:00">14:00</SelectItem>
+              <SelectItem value="14:30">14:30</SelectItem>
+              <SelectItem value="15:00">15:00</SelectItem>
+              <SelectItem value="15:30">15:30</SelectItem>
+              <SelectItem value="16:00">16:00</SelectItem>
+              <SelectItem value="16:30">16:30</SelectItem>
+              <SelectItem value="17:00">17:00</SelectItem>
+              <SelectItem value="17:30">17:30</SelectItem>
+              <SelectItem value="18:00">18:00</SelectItem>
+              <SelectItem value="18:30">18:30</SelectItem>
+              <SelectItem value="19:00">19:00</SelectItem>
+              <SelectItem value="19:30">19:30</SelectItem>
+              <SelectItem value="20:00">20:00</SelectItem>
+              <SelectItem value="20:30">20:30</SelectItem>
+              <SelectItem value="21:00">21:00</SelectItem>
+              <SelectItem value="21:30">21:30</SelectItem>
+              <SelectItem value="22:00">22:00</SelectItem>
+              <SelectItem value="22:30">22:30</SelectItem>
+              <SelectItem value="23:00">23:00</SelectItem>
+              <SelectItem value="23:30">23:30</SelectItem>
           </SelectContent>
         </Select>
       </FormControl>
@@ -387,21 +471,38 @@ export function FormResident({
   )}
 />
 
-<FormField
-  control={form.control}
-  name="physicalActivityDetails"
-  render={({ field }) => (
-    <FormItem>
-      <FormLabel>
-        Se sim, qual ou quais atividades físicas?<br />
-      </FormLabel>
-      <FormControl>
-        <Input {...field} />
-      </FormControl>
-      <FormMessage />
-    </FormItem>
-  )}
-/>
+  <FormField
+    control={form.control}
+    name="sleepingDifficulty"
+    render={({ field }) => (
+      <FormItem>
+        <FormLabel>
+          Você tem alguma dificuldade ou desconforto para dormir? Qual?<br />
+        </FormLabel>
+        <FormControl>
+          <Input {...field} />
+        </FormControl>
+        <FormMessage />
+      </FormItem>
+    )}
+  />
+
+  <FormField
+    control={form.control}
+    name="physicalActivity"
+    render={({ field }) => (
+      <FormItem>
+        <FormLabel>
+        Você pratica alguma atividade física?<br />
+        </FormLabel>
+        <FormControl>
+          <Input {...field} />
+        </FormControl>
+        <FormMessage />
+      </FormItem>
+    )}
+  />
+
 
 <FormField
   control={form.control}
@@ -458,21 +559,29 @@ export function FormResident({
   )}
 />
 
-
 <FormField
   control={form.control}
   name="breathingDifficulty"
   render={({ field }) => (
     <FormItem>
-      <FormLabel>Você tem dificuldade para respirar?<br /></FormLabel>
+      <FormLabel>
+      Você tem dificuldade para respirar?<br />
+      </FormLabel>
       <FormControl>
-        <Select onValueChange={field.onChange} defaultValue={field.value}>
+      <Select onValueChange={field.onChange} defaultValue={field.value}>
           <SelectTrigger>
             <SelectValue placeholder="Selecione" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="Sim">Sim</SelectItem>
-            <SelectItem value="Não">Não</SelectItem>
+            <SelectItem value="Nunca(0%)">Nunca(0%)</SelectItem>
+            <SelectItem value="Raramente(10%)">Raramente(10%)</SelectItem>
+            <SelectItem value="Ocasionalmente(23%)">Ocasionalmente(23%)</SelectItem>
+            <SelectItem value="Às vezes(45%)">Às vezes(45%)</SelectItem>
+            <SelectItem value="Frequentemente(67%)">Frequentemente(67%)</SelectItem>
+            <SelectItem value="Geralmente(80%)">Geralmente(80%)</SelectItem>
+            <SelectItem value="Habitualmente(90%)">Habitualmente(90%)</SelectItem>
+            <SelectItem value="Sempre(100%)">Sempre(100%)x  </SelectItem>
+            <SelectItem value="Não sabe">Não sabe</SelectItem>
           </SelectContent>
         </Select>
       </FormControl>
@@ -480,6 +589,7 @@ export function FormResident({
     </FormItem>
   )}
 />
+
 
 <FormField
   control={form.control}
@@ -513,7 +623,7 @@ export function FormResident({
             <SelectItem value="18">18</SelectItem>
             <SelectItem value="19">19</SelectItem>
             <SelectItem value="20">20</SelectItem>
-            <SelectItem value="+20">+20</SelectItem>
+            <SelectItem value="+ de 20 cigarros">+20</SelectItem>
             <SelectItem value="não fuma">não fuma</SelectItem>
           </SelectContent>
         </Select>
@@ -542,7 +652,7 @@ export function FormResident({
             <SelectItem value="2 a 4x">2 a 4x na semana</SelectItem>
             <SelectItem value="4 a 5">4 a 5x na semana</SelectItem>
             <SelectItem value="5 a 6">5 a 6x na semana</SelectItem>
-            <SelectItem value="todo dia">todo dia</SelectItem>
+            <SelectItem value="todo dia">Todo dia</SelectItem>
             <SelectItem value="Não sabe">Não sabe</SelectItem>
           </SelectContent>
         </Select>
@@ -571,7 +681,7 @@ export function FormResident({
             <SelectItem value="2 a 4x">2 a 4x na semana</SelectItem>
             <SelectItem value="4 a 5">4 a 5x na semana</SelectItem>
             <SelectItem value="5 a 6">5 a 6x na semana</SelectItem>
-            <SelectItem value="todo dia">todo dia</SelectItem>
+            <SelectItem value="todo dia">Todo dia</SelectItem>
             <SelectItem value="Não sabe">Não sabe</SelectItem>
           </SelectContent>
         </Select>
@@ -580,6 +690,25 @@ export function FormResident({
     </FormItem>
   )}
 />
+
+<FormField
+  control={form.control}
+  name="Observations_road_habits"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+      Observações:<br />
+      </FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+        <Subheading>Histórico Clínico</Subheading>
+        <Divider className="my-4" />
 
 <FormField
   control={form.control}
@@ -597,6 +726,7 @@ export function FormResident({
           <SelectContent>
             <SelectItem value="Sim">Sim</SelectItem>
             <SelectItem value="Não">Não</SelectItem>
+            <SelectItem value="Não sabe">Não sabe</SelectItem>
           </SelectContent>
         </Select>
       </FormControl>
@@ -605,12 +735,13 @@ export function FormResident({
   )}
 />
 
+
 <FormField
   control={form.control}
   name="gastricProblems"
   render={({ field }) => (
     <FormItem>
-      <FormLabel>Problemas gástricos<br /></FormLabel>
+      <FormLabel>Você tem ou já teve problemas gástricos?<br /></FormLabel>
       <FormControl>
         <Select onValueChange={field.onChange} defaultValue={field.value}>
           <FormControl>
@@ -621,6 +752,7 @@ export function FormResident({
           <SelectContent>
             <SelectItem value="Sim">Sim</SelectItem>
             <SelectItem value="Não">Não</SelectItem>
+            <SelectItem value="Não sabe">Não sabe</SelectItem>
           </SelectContent>
         </Select>
       </FormControl>
@@ -634,7 +766,7 @@ export function FormResident({
   name="convulsions"
   render={({ field }) => (
     <FormItem>
-      <FormLabel>Você tem ou já teve convulsões<br /></FormLabel>
+      <FormLabel>Você tem ou já teve convulsões?<br /></FormLabel>
       <FormControl>
         <Select onValueChange={field.onChange} defaultValue={field.value}>
           <FormControl>
@@ -645,6 +777,7 @@ export function FormResident({
           <SelectContent>
             <SelectItem value="Sim">Sim</SelectItem>
             <SelectItem value="Não">Não</SelectItem>
+            <SelectItem value="Não sabe ">Não sabe</SelectItem>
           </SelectContent>
         </Select>
       </FormControl>
@@ -667,6 +800,7 @@ export function FormResident({
           <SelectContent>
             <SelectItem value="Sim">Sim</SelectItem>
             <SelectItem value="Não">Não</SelectItem>
+            <SelectItem value="Não sabe">Não sabe</SelectItem>
           </SelectContent>
         </Select>
       </FormControl>
@@ -680,7 +814,7 @@ export function FormResident({
   name="hypertension"
   render={({ field }) => (
     <FormItem>
-      <FormLabel>Você tem hipertensão?<br /></FormLabel>
+      <FormLabel>Você é diagnosticado com hipertensão?<br /></FormLabel>
       <FormControl>
         <Select onValueChange={field.onChange} defaultValue={field.value}>
           <FormControl>
@@ -691,6 +825,7 @@ export function FormResident({
           <SelectContent>
             <SelectItem value="Sim">Sim</SelectItem>
             <SelectItem value="Não">Não</SelectItem>
+            <SelectItem value="Não sabe">Não sabe</SelectItem>
           </SelectContent>
         </Select>
       </FormControl>
@@ -704,7 +839,7 @@ export function FormResident({
   name="otherPathologies"
   render={({ field }) => (
     <FormItem>
-      <FormLabel>Outros doenças além das citadas:<br /></FormLabel>
+      <FormLabel>Possui outras doenças além das citadas? Qual?<br /></FormLabel>
       <FormControl>
         <Input {...field} />
       </FormControl>
@@ -718,31 +853,7 @@ export function FormResident({
   name="previousSurgery"
   render={({ field }) => (
     <FormItem>
-      <FormLabel>Já fez alguma cirurgia?<br /></FormLabel>
-      <FormControl>
-        <Select onValueChange={field.onChange} defaultValue={field.value}>
-          <FormControl>
-            <SelectTrigger>
-              <SelectValue placeholder="Selecione" />
-            </SelectTrigger>
-          </FormControl>
-          <SelectContent>
-            <SelectItem value="Sim">Sim</SelectItem>
-            <SelectItem value="Não">Não</SelectItem>
-          </SelectContent>
-        </Select>
-      </FormControl>
-      <FormMessage />
-    </FormItem>
-  )}
-/>
-
-<FormField
-  control={form.control}
-  name="surgeryDetails"
-  render={({ field }) => (
-    <FormItem>
-      <FormLabel>Qual cirurgia:<br /></FormLabel>
+      <FormLabel>Já realizou alguma cirurgia? Qual?<br /></FormLabel>
       <FormControl>
         <Input {...field} />
       </FormControl>
@@ -753,34 +864,10 @@ export function FormResident({
 
 <FormField
   control={form.control}
-  name="medication"//mudar para so medicamentos
+  name="medication"
   render={({ field }) => (
     <FormItem>
-      <FormLabel>
-        Toma alguma medicação?<br />
-      </FormLabel>
-      <FormControl>
-        <Select onValueChange={field.onChange} defaultValue={field.value}>
-          <SelectTrigger>
-            <SelectValue placeholder="Selecione" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="Sim">Sim</SelectItem>
-            <SelectItem value="Não">Não</SelectItem>
-          </SelectContent>
-        </Select>
-      </FormControl>
-      <FormMessage />
-    </FormItem>
-  )}
-/>
-
-<FormField
-  control={form.control}
-  name="medicationDetails"
-  render={({ field }) => (
-    <FormItem>
-      <FormLabel>Qual medicação ?<br /></FormLabel>
+      <FormLabel>Faz uso de medicamentos? Quais?<br /></FormLabel>
       <FormControl>
         <Input {...field} />
       </FormControl>
@@ -805,36 +892,15 @@ export function FormResident({
   )}
 />
 
-<FormField
-  control={form.control}
-  name="diabetesInFamily"
-  render={({ field }) => (
-    <FormItem>
-      <FormLabel>Há diabético na família?<br /></FormLabel>
-      <FormControl>
-        <Select onValueChange={field.onChange} defaultValue={field.value}>
-          <FormControl>
-            <SelectTrigger>
-              <SelectValue placeholder="Selecione" />
-            </SelectTrigger>
-          </FormControl>
-          <SelectContent>
-            <SelectItem value="Sim">Sim</SelectItem>
-            <SelectItem value="Não">Não</SelectItem>
-          </SelectContent>
-        </Select>
-      </FormControl>
-      <FormMessage />
-    </FormItem>
-  )}
-/>
 
 <FormField
   control={form.control}
-  name="hipertensionFamilyMembers"// criar
+  name="obsevation_clinical_history"
   render={({ field }) => (
     <FormItem>
-      <FormLabel>Quem na família é diabético?<br /></FormLabel>
+      <FormLabel>
+        Observações:<br />
+      </FormLabel>
       <FormControl>
         <Input {...field} />
       </FormControl>
@@ -843,24 +909,18 @@ export function FormResident({
   )}
 />
 
+<Subheading>Histórico Familiar</Subheading>
+        <Divider className="my-4" />
+
+
 <FormField
   control={form.control}
-  name="hipertensionInFamily"//hipertensão criar
+  name="diabetesInFamily"
   render={({ field }) => (
     <FormItem>
-      <FormLabel>Possui algum familiar com hipertensão?<br /></FormLabel>
+      <FormLabel>Possui algum familiar com diabétes? Quem?<br /></FormLabel>
       <FormControl>
-        <Select onValueChange={field.onChange} defaultValue={field.value}>
-          <FormControl>
-            <SelectTrigger>
-              <SelectValue placeholder="Selecione" />
-            </SelectTrigger>
-          </FormControl>
-          <SelectContent>
-            <SelectItem value="Sim">Sim</SelectItem>
-            <SelectItem value="Não">Não</SelectItem>
-          </SelectContent>
-        </Select>
+        <Input {...field} />
       </FormControl>
       <FormMessage />
     </FormItem>
@@ -872,33 +932,9 @@ export function FormResident({
   name="diabetesFamilyMembers"//é hipertensão
   render={({ field }) => (
     <FormItem>
-      <FormLabel>Quem na família tem hipertensão?<br /></FormLabel>
+      <FormLabel>Possui algum familiar com hipertensão?<br /></FormLabel>
       <FormControl>
         <Input {...field} />
-      </FormControl>
-      <FormMessage />
-    </FormItem>
-  )}
-/>
-
-<FormField
-  control={form.control}
-  name="obesityInFamily"
-  render={({ field }) => (
-    <FormItem>
-      <FormLabel>Há obesos na família?<br /></FormLabel>
-      <FormControl>
-        <Select onValueChange={field.onChange} defaultValue={field.value}>
-          <FormControl>
-            <SelectTrigger>
-              <SelectValue placeholder="Selecione" />
-            </SelectTrigger>
-          </FormControl>
-          <SelectContent>
-            <SelectItem value="Sim">Sim</SelectItem>
-            <SelectItem value="Não">Não</SelectItem>
-          </SelectContent>
-        </Select>
       </FormControl>
       <FormMessage />
     </FormItem>
@@ -910,7 +946,7 @@ export function FormResident({
   name="obesityFamilyMembers"
   render={({ field }) => (
     <FormItem>
-      <FormLabel>Quem na família é obeso?<br /></FormLabel>
+      <FormLabel>Possui algum familiar com obesidade? Quem?<br /></FormLabel>
       <FormControl>
         <Input {...field} />
       </FormControl>
@@ -921,10 +957,28 @@ export function FormResident({
 
 <FormField
   control={form.control}
+  name="observation_family_history"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Observações:<br /></FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<Subheading>Marcadores de Saúde</Subheading>
+        <Divider className="my-4" />
+
+
+<FormField
+  control={form.control}
   name="bloodGlucose" //criar
   render={({ field }) => (
     <FormItem>
-      <FormLabel>Glicemia:<br /></FormLabel>
+      <FormLabel>Glicemia (mg/dl):<br /></FormLabel>
       <FormControl>
         <Input {...field} />
       </FormControl>
@@ -938,7 +992,7 @@ export function FormResident({
   name="cholesterol"
   render={({ field }) => (
     <FormItem>
-      <FormLabel>Colesterol:<br /></FormLabel>
+      <FormLabel>Colesterol (mg/dl):<br /></FormLabel>
       <FormControl>
         <Input {...field} />
       </FormControl>
@@ -953,7 +1007,7 @@ export function FormResident({
   render={({ field }) => (
     <FormItem>
       <FormLabel>
-        Trigliceridios:<br />
+        Trigliceridios (mg/dl):<br />
       </FormLabel>
       <FormControl>
         <Input {...field} />
@@ -965,11 +1019,11 @@ export function FormResident({
 
 <FormField
   control={form.control}
-  name="observationHealth"
+  name="bloodPressure"//trigliceridio criar
   render={({ field }) => (
     <FormItem>
       <FormLabel>
-        Observação:<br />
+        Pressão Arterial (mg/dl):<br />
       </FormLabel>
       <FormControl>
         <Input {...field} />
@@ -979,12 +1033,49 @@ export function FormResident({
   )}
 />
 
+<FormField
+  control={form.control}
+  name="SAT_O2"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        SAT O2 (%):<br />
+      </FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+
+<FormField
+  control={form.control}
+  name="observation_health_markers"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>
+        Observações:<br />
+      </FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<Subheading>Medidas Antropométricas</Subheading>
+        <Divider className="my-4" />
+
+
             <FormField
   control={form.control}
   name="currentWeight"
   render={({ field }) => (
     <FormItem>
-      <FormLabel>Peso atual:<br /></FormLabel>
+      <FormLabel>Peso (Kg):<br /></FormLabel>
       <FormControl>
         <Input {...field}
             onChange={(e) => {
@@ -1026,10 +1117,10 @@ export function FormResident({
   name="height"
   render={({ field }) => (
     <FormItem>
-      <FormLabel>Altura (em metros, colocar ponto no lugar da virgula):<br /></FormLabel>
+      <FormLabel>Altura(cm):<br /></FormLabel>
       <FormControl>
         <Input {...field}
-          onChange={(e) => {
+           onChange={(e) => {
             field.onChange(e);
             // Garantir que o valor seja um número válido antes de calcular
             const height = parseFloat(e.target.value);
@@ -1055,7 +1146,7 @@ export function FormResident({
             } else {
               form.setValue("bmi", "");
             }
-          }} />
+          }}/>
       </FormControl>
       <FormMessage />
     </FormItem>
@@ -1089,12 +1180,13 @@ export function FormResident({
     </FormItem>
   )}
 />
+
 <FormField
   control={form.control}
   name="waistCircumference"
   render={({ field }) => (
     <FormItem>
-      <FormLabel>Circunferência da cintura:<br /></FormLabel>
+      <FormLabel>Circunferência da cintura (cm):<br /></FormLabel>
       <FormControl>
         <Input {...field} 
         onChange={(e) => {
@@ -1119,7 +1211,7 @@ export function FormResident({
   name="hipCircumference"
   render={({ field }) => (
     <FormItem>
-      <FormLabel>Circunferência do quadril:<br /></FormLabel>
+      <FormLabel>Circunferência do quadril (cm):<br /></FormLabel>
       <FormControl>
         <Input {...field} 
          onChange={(e) => {
@@ -1158,7 +1250,7 @@ export function FormResident({
   name="calfCircumference"
   render={({ field }) => (
     <FormItem>
-      <FormLabel>Circunferência da panturrilha:<br /></FormLabel>
+      <FormLabel>Circunferência da panturrilha (cm):<br /></FormLabel>
       <FormControl>
         <Input {...field} />
       </FormControl>
@@ -1169,17 +1261,21 @@ export function FormResident({
 
 <FormField
   control={form.control}
-  name="armCircumference"
+  name="observation_anthropometric_measurements"//rcq
   render={({ field }) => (
     <FormItem>
-      <FormLabel>Circunferência do braço:<br /></FormLabel>
+      <FormLabel>Observações:<br /></FormLabel>
       <FormControl>
-        <Input {...field} />
+        <Input {...field} readOnly/>
       </FormControl>
       <FormMessage />
     </FormItem>
   )}
 />
+
+<Subheading>Ingestão Hídrica</Subheading>
+        <Divider className="my-4" />
+
 
 <FormField
   control={form.control}
@@ -1233,10 +1329,21 @@ export function FormResident({
   render={({ field }) => (
     <FormItem>
       <FormLabel>
-        A água que você bebe é potável, filtrada, fervida ou tratada com algum produto?<br />
+      A água que você bebe é potável, filtrada, fervida ou tratada com algum produto?<br />
       </FormLabel>
       <FormControl>
-        <Input {...field} />
+      <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="Potável">Potável</SelectItem>
+            <SelectItem value="Filtrada">Filtrada</SelectItem>
+            <SelectItem value="Fervida">Fervida</SelectItem>
+            <SelectItem value="Tratada com algum produto">Tratada com algum produto</SelectItem>
+            <SelectItem value="Nenhuma da opções">Nenhuma da opções</SelectItem>
+          </SelectContent>
+        </Select>
       </FormControl>
       <FormMessage />
     </FormItem>
@@ -1248,8 +1355,40 @@ export function FormResident({
   name="urineColor"
   render={({ field }) => (
     <FormItem>
-      <FormLabel>Qual a cor da sua urina? (Ex: transparente, branca ou turva, amarelo palha (muito claro), amarelo transparente, amarelo escuro, âmbaroumel, laranja, rosa ou avermelhada, acastanhada, azulado ou esverdeado, não sabe)
-<br /></FormLabel>
+      <FormLabel>
+      Qual a cor da sua urina?<br />
+      </FormLabel>
+      <FormControl>
+      <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder="Selecione" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="Transparente">Transparente</SelectItem>
+            <SelectItem value="Branca ou turva">Branca ou turva</SelectItem>
+            <SelectItem value="Amarelo palha (muito claro)">Amarelo palha (muito claro)</SelectItem>
+            <SelectItem value="Amarelo transparente">Amarelo transparente</SelectItem>
+            <SelectItem value="Amarelo escura">Amarelo escuro</SelectItem>
+            <SelectItem value="Âmbar ou mel">Âmbar ou mel</SelectItem>
+            <SelectItem value="Laraja">Laraja</SelectItem>
+            <SelectItem value="Rosa ou avermelhada">Rosa ou avermelhada</SelectItem>
+            <SelectItem value="Acastanhada">Acastanhada</SelectItem>
+            <SelectItem value="Azulado ou esverdeado">Azulado ou esverdeado</SelectItem>
+            <SelectItem value="Não sabe">Não sabe</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="Observation_water_intake"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Observações:<br /></FormLabel>
       <FormControl>
         <Input {...field} />
       </FormControl>
@@ -1257,6 +1396,9 @@ export function FormResident({
     </FormItem>
   )}
 />
+
+<Subheading>Função Intestinal</Subheading>
+        <Divider className="my-4" />
 
 <FormField
   control={form.control}
@@ -1418,7 +1560,7 @@ export function FormResident({
             <SelectItem value="raramente(10%)">raramente(10%)</SelectItem>
             <SelectItem value="ocasionalmente(20-30%)">ocasionalmente(20-30%)</SelectItem>
             <SelectItem value="ás vezes(40-50%)">ás vezes(40-50%)</SelectItem>
-            <SelectItem value="frequentemente(60-70)">frequentemente(60-70)</SelectItem>
+            <SelectItem value="frequentemente(60-70%)">frequentemente(60-70)</SelectItem>
             <SelectItem value="geralmente(80%)">geralmente(80%)</SelectItem>
             <SelectItem value="habitualmente(90%)">habitualmente(90%)</SelectItem>
             <SelectItem value="sempre(100%)">sempre(100%)</SelectItem>
@@ -1449,7 +1591,7 @@ export function FormResident({
             <SelectItem value="raramente(10%)">raramente(10%)</SelectItem>
             <SelectItem value="ocasionalmente(20-30%)">ocasionalmente(20-30%)</SelectItem>
             <SelectItem value="ás vezes(40-50%)">ás vezes(40-50%)</SelectItem>
-            <SelectItem value="frequentemente(60-70)">frequentemente(60-70)</SelectItem>
+            <SelectItem value="frequentemente(60-70%)">frequentemente(60-70)</SelectItem>
             <SelectItem value="geralmente(80%)">geralmente(80%)</SelectItem>
             <SelectItem value="habitualmente(90%)">habitualmente(90%)</SelectItem>
             <SelectItem value="sempre(100%)">sempre(100%)</SelectItem>
@@ -1480,7 +1622,7 @@ export function FormResident({
             <SelectItem value="raramente(10%)">raramente(10%)</SelectItem>
             <SelectItem value="ocasionalmente(20-30%)">ocasionalmente(20-30%)</SelectItem>
             <SelectItem value="ás vezes(40-50%)">ás vezes(40-50%)</SelectItem>
-            <SelectItem value="frequentemente(60-70)">frequentemente(60-70)</SelectItem>
+            <SelectItem value="frequentemente(60-70%)">frequentemente(60-70)</SelectItem>
             <SelectItem value="geralmente(80%)">geralmente(80%)</SelectItem>
             <SelectItem value="habitualmente(90%)">habitualmente(90%)</SelectItem>
             <SelectItem value="sempre(100%)">sempre(100%)</SelectItem>
@@ -1511,7 +1653,7 @@ export function FormResident({
             <SelectItem value="raramente(10%)">raramente(10%)</SelectItem>
             <SelectItem value="ocasionalmente(20-30%)">ocasionalmente(20-30%)</SelectItem>
             <SelectItem value="ás vezes(40-50%)">ás vezes(40-50%)</SelectItem>
-            <SelectItem value="frequentemente(60-70)">frequentemente(60-70)</SelectItem>
+            <SelectItem value="frequentemente(60-70%)">frequentemente(60-70)</SelectItem>
             <SelectItem value="geralmente(80%)">geralmente(80%)</SelectItem>
             <SelectItem value="habitualmente(90%)">habitualmente(90%)</SelectItem>
             <SelectItem value="sempre(100%)">sempre(100%)</SelectItem>
@@ -1542,7 +1684,7 @@ export function FormResident({
             <SelectItem value="raramente(10%)">raramente(10%)</SelectItem>
             <SelectItem value="ocasionalmente(20-30%)">ocasionalmente(20-30%)</SelectItem>
             <SelectItem value="ás vezes(40-50%)">ás vezes(40-50%)</SelectItem>
-            <SelectItem value="frequentemente(60-70)">frequentemente(60-70)</SelectItem>
+            <SelectItem value="frequentemente(60-70%)">frequentemente(60-70)</SelectItem>
             <SelectItem value="geralmente(80%)">geralmente(80%)</SelectItem>
             <SelectItem value="habitualmente(90%)">habitualmente(90%)</SelectItem>
             <SelectItem value="sempre(100%)">sempre(100%)</SelectItem>
@@ -1570,14 +1712,14 @@ export function FormResident({
     </FormItem>
   )}
 />
-
+<Subheading>Hábitos Alimentares</Subheading>
 <FormField
   control={form.control}
   name="vitaminSupplementation"
   render={({ field }) => (
     <FormItem>
       <FormLabel>
-        Você toma algum suplemento alimentares? Quais?<br />
+        Você faz uso de suplementos alimentares? Quais?<br />
       </FormLabel>
       <FormControl>
         <Input {...field} />
@@ -1593,7 +1735,7 @@ export function FormResident({
   render={({ field }) => (
     <FormItem>
       <FormLabel>
-        Você alergias ou intolerancia alimentar? Quais?<br />
+        Possio alergias ou intolerância alimentar? Quais?<br />
       </FormLabel>
       <FormControl>
         <Input {...field} />
@@ -1683,75 +1825,6 @@ export function FormResident({
 
 <FormField
   control={form.control}
-  name="snack"
-  render={({ field }) => (
-    <FormItem>
-      <FormLabel>
-        Você lancha entre as refeições principais? se sim, oque você costuma comer?:<br /></FormLabel>
-      <FormControl>
-        <Input {...field} />
-      </FormControl>
-      <FormMessage />
-    </FormItem>
-  )}
-/>
-
-<FormField
-  control={form.control}
-  name="weightLoss"
-  render={({ field }) => (
-    <FormItem>
-      <FormLabel>Nos ultimos 3 a 6 meses você teve perda de peso involuntária? se sim, quantos kilos você perdeu?:<br /></FormLabel>
-      <FormControl>
-        <Input {...field} />
-      </FormControl>
-      <FormMessage />
-    </FormItem>
-  )}
-/>
-
-<FormField
-  control={form.control}
-  name="seriusOrDiscomfort"
-  render={({ field }) => (
-    <FormItem>
-      <FormLabel>Você está com alguma doença ou desconforto <b>grave</b> por muito tempo <b>3 a 6 meses</b>  o qual  fez com que você perdesse muito peso ou que tenha reduzido a ingestação de alimentos ou você nâo prevê conseguir se alimentar nos proximos 5 dias?:<br /></FormLabel>
-      <FormControl>
-      <Select onValueChange={field.onChange} defaultValue={field.value}>
-          <FormControl>
-            <SelectTrigger>
-              <SelectValue placeholder="Selecione" />
-            </SelectTrigger>
-          </FormControl>
-          <SelectContent>
-            <SelectItem value="Sim">Sim</SelectItem>
-            <SelectItem value="Não">Não</SelectItem>
-            <SelectItem value="NaoSabe">Não sabe</SelectItem>
-          </SelectContent>
-        </Select>
-      </FormControl>
-      <FormMessage />
-    </FormItem>
-  )}
-/>
-
-<FormField
-  control={form.control}
-  name="observation"
-  render={({ field }) => (
-    <FormItem>
-      <FormLabel>Observações:<br /></FormLabel>
-      <FormControl>
-        <Input {...field} />
-      </FormControl>
-      <FormMessage />
-    </FormItem>
-  )}
-/>
-
-
-<FormField
-  control={form.control}
   name="snackingHabits"
   render={({ field }) => (
     <FormItem>
@@ -1772,7 +1845,7 @@ export function FormResident({
   render={({ field }) => (
     <FormItem>
       <FormLabel>
-        Você tem o costume de comer legumes? Se sim, qual ou quais?<br />
+        Você tem o costume de comer legumes? Se sim, quais?<br />
       </FormLabel>
       <FormControl>
         <Input {...field} />
@@ -1843,6 +1916,19 @@ export function FormResident({
   )}
 />
 
+<FormField
+  control={form.control}
+  name="observation"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Observações:<br /></FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
 <h2>Recordatório 24 horas:</h2>
 
@@ -1929,6 +2015,7 @@ export function FormResident({
     </FormItem>
   )}
 />
+<Subheading>insegurança Alimentar</Subheading>
 
 <FormField
   control={form.control}

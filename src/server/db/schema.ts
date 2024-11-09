@@ -364,6 +364,14 @@ export const nutritionScreeningSchema = createTable("nutrition_screening", {
   incompleteEvacuation: text("incomplete_evacuation"),
   observationIntestinal: text("observation_intestinal"),
   snack: text("snack"),
+  "observationsRoadHabits": text("observations_road_habits"), // coisas novas
+  "obsevationClinicalHistory": text("obsevation_clinical_history"),
+  "observationFamilyHistory": text("observation_family_history"),
+  "bloodPressure": text("blood_pressure"),
+  "satO2": text("sat_o2"),
+  "observationHealthMarkers": text("observation_health_markers"),
+  "observationAnthropometricMeasurements": text("observation_anthropometric_measurements"),
+  "observationWaterIntake": text("observation_water_intake"),
   alimentalPain:text("alimental_pain"),
   createdAt: timestamp("created_at")
     .default(sql`CURRENT_TIMESTAMP`)
