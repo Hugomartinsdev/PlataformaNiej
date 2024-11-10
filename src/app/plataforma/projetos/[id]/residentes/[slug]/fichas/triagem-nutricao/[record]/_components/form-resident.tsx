@@ -140,7 +140,6 @@ const formSchema = z.object({
   kidsMealSkipping: z.string().optional(),
   kidsHungerDueToLackOfMoney: z.string().optional(),
   kidsFullDayWithoutFood: z.string().optional(),
-  stoolFrequencyVariation: z.string().optional(),
   incompleteEvacuation: z.string().optional(),
   observationIntestinal: z.string().optional(),
   snack: z.string().optional(),
@@ -267,7 +266,6 @@ export function FormResident({
       kidsMealSkipping: data?.eveningSnackRecall || "",
       kidsHungerDueToLackOfMoney:data?.eveningSnackRecall || "",
       kidsFullDayWithoutFood:data?.eveningSnackRecall || "",
-      stoolFrequencyVariation:data?.eveningSnackRecall || "",
       incompleteEvacuation: data?.eveningSnackRecall || "",
       observationIntestinal:data?.eveningSnackRecall || "",
       snack:data?.eveningSnackRecall || "",
@@ -1512,38 +1510,6 @@ export function FormResident({
 
 <FormField
   control={form.control}
-  name="stoolFrequencyVariation"
-  render={({ field }) => (
-    <FormItem>
-      <FormLabel>
-        Nos últimos 3 meses qual foi a frequência que suas fezes variam entre tipo 1 e 2?<br />
-      </FormLabel>
-      <FormControl>
-          <Select onValueChange={field.onChange} defaultValue={field.value}>
-          <SelectTrigger>
-            <SelectValue placeholder="Selecione" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="pelo menos 7x na semana">pelo menos 7x na semana</SelectItem>
-            <SelectItem value="6x na semana">6x na semana</SelectItem>
-            <SelectItem value="5x na semana">5x na semana</SelectItem>
-            <SelectItem value="4x na semana">4x na semana</SelectItem>
-            <SelectItem value="3x na semana">3x na semana</SelectItem>
-            <SelectItem value="2x na semana">2x na semana</SelectItem>
-            <SelectItem value="1x na semana">1x na semana</SelectItem>
-            <SelectItem value="pelo menos 4x no mes">pelo menos 4x no mes</SelectItem>
-            <SelectItem value="Não sabe">Não sabe</SelectItem>
-          </SelectContent>
-        </Select>
-      </FormControl>
-      <FormMessage />
-    </FormItem>
-  )}
-/>
-
-
-<FormField
-  control={form.control}
   name="stoolConsistencyVariation"
   render={({ field }) => (
     <FormItem>
@@ -2061,7 +2027,7 @@ export function FormResident({
   render={({ field }) => (
     <FormItem>
       <FormLabel>
-        Nos últimos três meses, os morradores deste domicílio tiveram a preocupação de que a comida acabasse antes que tivessem dinheiro para comprar mais comida?<br />
+        Nos últimos três meses, os moradores deste domicílio tiveram a preocupação de que a comida acabasse antes que tivessem dinheiro para comprar mais comida?<br />
       </FormLabel>
       <FormControl>
         <Select onValueChange={field.onChange} defaultValue={field.value}>

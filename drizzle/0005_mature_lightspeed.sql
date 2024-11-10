@@ -96,7 +96,6 @@ CREATE TABLE IF NOT EXISTS "plataforma-niej_nutrition_screening" (
 	"kids_meal_skipping" text,
 	"kids_hunger_due_to_lack_of_money" text,
 	"kids_full_day_without_food" text,
-	"stool_frequency_variation" text,
 	"incomplete_evacuation" text,
 	"observation_intestinal" text,
 	"snack" text,

@@ -360,7 +360,6 @@ export const nutritionScreeningSchema = createTable("nutrition_screening", {
   kidsMealSkipping:text("kids_meal_skipping"),
   kidsHungerDueToLackOfMoney: text("kids_hunger_due_to_lack_of_money"),
   kidsFullDayWithoutFood: text("kids_full_day_without_food"),
-  stoolFrequencyVariation: text("stool_frequency_variation"),
   incompleteEvacuation: text("incomplete_evacuation"),
   observationIntestinal: text("observation_intestinal"),
   snack: text("snack"),
